@@ -33,8 +33,36 @@
       }
     },
     {
+      "data": {
+        "url": "oceans.topojson",
+        "format": {
+          "type": "topojson",
+          "feature": "oceans"
+        }
+      },
       "mark": {
-        "type": "geoshape"
+        "type": "geoshape",
+        "fill": "skyblue"
+      }
+    },
+    {
+      "data": {
+        "url": "WorldMapWithGraticules.topojson",
+        "format": {
+          "type": "topojson",
+          "feature": "ne_110m_graticules_30"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": null,
+        "stroke": "lightgray"
+      }
+    },
+    {
+      "mark": {
+        "type": "geoshape",
+        "stroke":"grey", "strokeWidth":1
       },
       "transform": [
         {
@@ -52,17 +80,28 @@
           }
         },
         {
+          "lookup": "properties.NAME",
+          "from": {
+            "data": {
+              "url": "..\\Data\\cell-phones-by-country-2023.csv"
+            },
+            "key": "country",
+            "fields": [
+              "numUsers",
+              "linesPer100",
+              "pop2023"
+            ]
+          }
+        },
+        {
           "calculate": "datum.iosMarketShare > datum.androidMarketShare ? 'IOS' : 'Android'",
-          "as": "market_dominator"
+          "as": "Market Dominator"
         }
       ],
       "encoding": {
         "color": {
-          "field": "market_dominator",
-          "type": "nominal",
-          "scale": {
-            "scheme": "purplegreen"
-          }
+          "field": "iosMarketShare",
+          "type": "quantitative"
         },
         "tooltip": [
           {
@@ -81,13 +120,6 @@
             "title": "Android Market Share"
           }
         ]
-      }
-    },
-    {
-      "mark": {
-        "type": "geoshape",
-        "fill": null,
-        "stroke": "gray"
       }
     }
   ]
