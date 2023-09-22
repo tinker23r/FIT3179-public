@@ -39,6 +39,9 @@
             "scale": {
                 "scheme": "purplegreen"
             }
-        }
+        },
+        "tooltip":[
+            {"field":"country", "type": "nominal"}
+        ]
     }
 }
