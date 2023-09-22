@@ -15,24 +15,6 @@
   },
   "layer": [
     {
-      "transform": [
-        {
-          "calculate": "'Data unavailable for ' + datum.properties.NAME",
-          "as": "note"
-        }
-      ],
-      "mark": {
-        "type": "geoshape",
-        "fill": "lightgray",
-        "stroke": "white"
-      },
-      "encoding": {
-        "tooltip": {
-          "field": "note"
-        }
-      }
-    },
-    {
       "data": {
         "url": "oceans.topojson",
         "format": {
@@ -62,8 +44,12 @@
     {
       "mark": {
         "type": "geoshape",
-        "stroke":"grey", "strokeWidth":1
-      },
+        "stroke": "black",
+        "strokeWidth": 0.3,
+        "fill": "lightgrey"
+      }
+    },
+    {
       "transform": [
         {
           "lookup": "properties.NAME",
@@ -94,19 +80,35 @@
           }
         },
         {
+          "lookup": "properties.NAME",
+          "from": {
+            "data": {
+              "url": "average-latitude-longitude-countries.csv"
+            },
+            "key": "Country",
+            "fields": [
+              "Latitude",
+              "Longitude"
+            ]
+          }
+        },
+        {
           "calculate": "datum.iosMarketShare > datum.androidMarketShare ? 'IOS' : 'Android'",
           "as": "Market Dominator"
+        },
+        {
+          "calculate": "datum.iosMarketShare > datum.androidMarketShare ? datum.iosMarketShare : datum.androidMarketShare",
+          "as": "market leader value"
         }
       ],
+      "mark": {
+        "type": "circle",
+        "opacity": 0.6
+      },
       "encoding": {
-        "color": {
-          "field": "iosMarketShare",
-          "type": "quantitative"
-        },
         "tooltip": [
           {
             "field": "properties.NAME",
-            "type": "nominal",
             "title": "Country"
           },
           {
@@ -118,8 +120,59 @@
             "field": "androidMarketShare",
             "type": "quantitative",
             "title": "Android Market Share"
+          },
+          {
+            "field": "numUsers",
+            "title": "Total Smartphones"
           }
-        ]
+        ],
+        "color": {
+          "field": "Market Dominator",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "IOS",
+              "Android"
+            ],
+            "range": [
+              "#FF5733",
+              "#008000"
+            ]
+          }
+        },
+        "opacity": {
+          "field": "market leader value",
+          "type": "quantitative",
+          "scale": {
+            "domain": [50, 100],
+            "range": [0.25,0.95]
+          },
+          "title": "% of Market"
+        },
+        "latitude": {
+          "field": "Latitude",
+          "type": "quantitative"
+        },
+        "longitude": {
+          "field": "Longitude",
+          "type": "quantitative"
+        },
+        "size": {
+          "legend": null,
+          "field": "numUsers",
+          "type": "quantitative",
+          "scale": {
+            "type": "sqrt",
+            "domain": [
+              0,
+              100
+            ],
+            "range": [
+              0,
+              1
+            ]
+          }
+        }
       }
     }
   ]
