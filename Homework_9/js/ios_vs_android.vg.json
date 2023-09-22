@@ -1,47 +1,94 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Market share between IOS vs Android 2023",
-    "width": 800,
-    "height": 400,
-    "projection": {
-        "type": "equalEarth"
-    },
-    "data": {
-        "url": "ne_110m_admin_0_countries.topojson",
-        "format": {
-            "type": "topojson",
-            "feature": "ne_110m_admin_0_countries"
-        }
-    },
-    "transform": [
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Market share between IOS vs Android 2023",
+  "width": 800,
+  "height": 400,
+  "projection": {
+    "type": "equalEarth"
+  },
+  "data": {
+    "url": "ne_110m_admin_0_countries.topojson",
+    "format": {
+      "type": "topojson",
+      "feature": "ne_110m_admin_0_countries"
+    }
+  },
+  "layer": [
+    {
+      "transform": [
         {
-            "lookup": "properties.NAME",
-            "from": {
-                "data": {
-                    "url": "..\\Data\\iphone-market-share-by-country-2023.csv"
-                },
-                "key": "country",
-                "fields": [
-                    "iosMarketShare",
-                    "androidMarketShare",
-                    "pop2023"
-                ]
-            }
+          "calculate": "'Data unavailable for ' + datum.properties.NAME",
+          "as": "note"
         }
-    ],
-    "mark": {
-        "type": "geoshape"
+      ],
+      "mark": {
+        "type": "geoshape",
+        "fill": "lightgray",
+        "stroke": "white"
+      },
+      "encoding": {
+        "tooltip": {
+          "field": "note"
+        }
+      }
     },
-    "encoding": {
+    {
+      "mark": {
+        "type": "geoshape"
+      },
+      "transform": [
+        {
+          "lookup": "properties.NAME",
+          "from": {
+            "data": {
+              "url": "..\\Data\\iphone-market-share-by-country-2023.csv"
+            },
+            "key": "country",
+            "fields": [
+              "iosMarketShare",
+              "androidMarketShare",
+              "pop2023"
+            ]
+          }
+        },
+        {
+          "calculate": "datum.iosMarketShare > datum.androidMarketShare ? 'IOS' : 'Android'",
+          "as": "market_dominator"
+        }
+      ],
+      "encoding": {
         "color": {
+          "field": "market_dominator",
+          "type": "nominal",
+          "scale": {
+            "scheme": "purplegreen"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "properties.NAME",
+            "type": "nominal",
+            "title": "Country"
+          },
+          {
             "field": "iosMarketShare",
             "type": "quantitative",
-            "scale": {
-                "scheme": "purplegreen"
-            }
-        },
-        "tooltip":[
-            {"field":"country", "type": "nominal"}
+            "title": "IOS Market Share"
+          },
+          {
+            "field": "androidMarketShare",
+            "type": "quantitative",
+            "title": "Android Market Share"
+          }
         ]
+      }
+    },
+    {
+      "mark": {
+        "type": "geoshape",
+        "fill": null,
+        "stroke": "gray"
+      }
     }
+  ]
 }
