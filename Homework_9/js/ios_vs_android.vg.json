@@ -1,0 +1,44 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Market share between IOS vs Android 2023",
+    "width": 800,
+    "height": 400,
+    "projection": {
+        "type": "equalEarth"
+    },
+    "data": {
+        "url": "ne_110m_admin_0_countries.topojson",
+        "format": {
+            "type": "topojson",
+            "feature": "ne_110m_admin_0_countries"
+        }
+    },
+    "transform": [
+        {
+            "lookup": "properties.NAME",
+            "from": {
+                "data": {
+                    "url": "..\\Data\\iphone-market-share-by-country-2023.csv"
+                },
+                "key": "country",
+                "fields": [
+                    "iosMarketShare",
+                    "androidMarketShare",
+                    "pop2023"
+                ]
+            }
+        }
+    ],
+    "mark": {
+        "type": "geoshape"
+    },
+    "encoding": {
+        "color": {
+            "field": "iosMarketShare",
+            "type": "quantitative",
+            "scale": {
+                "scheme": "purplegreen"
+            }
+        }
+    }
+}
