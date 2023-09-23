@@ -7,7 +7,7 @@
     "type": "equalEarth"
   },
   "data": {
-    "url": "ne_110m_admin_0_countries.topojson",
+    "url": "https://raw.githubusercontent.com/tinker23r/FIT3179-public/main/Homework_9/js/ne_110m_admin_0_countries.topojson",
     "format": {
       "type": "topojson",
       "feature": "ne_110m_admin_0_countries"
@@ -16,7 +16,7 @@
   "layer": [
     {
       "data": {
-        "url": "oceans.topojson",
+        "url": "https://raw.githubusercontent.com/tinker23r/FIT3179-public/main/Homework_9/js/oceans.topojson",
         "format": {
           "type": "topojson",
           "feature": "oceans"
@@ -24,12 +24,13 @@
       },
       "mark": {
         "type": "geoshape",
-        "fill": "skyblue"
+        "fill": "skyblue",
+        "opacity": 0.5
       }
     },
     {
       "data": {
-        "url": "WorldMapWithGraticules.topojson",
+        "url": "https://raw.githubusercontent.com/tinker23r/FIT3179-public/main/Homework_9/js/WorldMapWithGraticules.topojson",
         "format": {
           "type": "topojson",
           "feature": "ne_110m_graticules_30"
@@ -46,7 +47,7 @@
         "type": "geoshape",
         "stroke": "black",
         "strokeWidth": 0.3,
-        "fill": "lightgrey"
+        "fill": "white"
       }
     },
     {
@@ -55,7 +56,7 @@
           "lookup": "properties.NAME",
           "from": {
             "data": {
-              "url": "..\\Data\\iphone-market-share-by-country-2023.csv"
+              "url": "https://raw.githubusercontent.com/tinker23r/FIT3179-public/main/Homework_9/Data/iphone-market-share-by-country-2023.csv"
             },
             "key": "country",
             "fields": [
@@ -69,7 +70,7 @@
           "lookup": "properties.NAME",
           "from": {
             "data": {
-              "url": "..\\Data\\cell-phones-by-country-2023.csv"
+              "url": "https://raw.githubusercontent.com/tinker23r/FIT3179-public/main/Homework_9/Data/cell-phones-by-country-2023.csv"
             },
             "key": "country",
             "fields": [
@@ -83,7 +84,7 @@
           "lookup": "properties.NAME",
           "from": {
             "data": {
-              "url": "average-latitude-longitude-countries.csv"
+              "url": "https://raw.githubusercontent.com/tinker23r/FIT3179-public/main/Homework_9/js/average-latitude-longitude-countries.csv"
             },
             "key": "Country",
             "fields": [
@@ -135,7 +136,7 @@
               "Android"
             ],
             "range": [
-              "#FF5733",
+              "#af8dc3",
               "#008000"
             ]
           }
