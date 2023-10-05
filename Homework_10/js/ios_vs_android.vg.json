@@ -1,8 +1,10 @@
 {
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Market share between IOS vs Android 2023",
-  "width": 800,
-  "height": 400,
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "description": "An interactive world map supporting pan and zoom.",
+  "width": 900,
+  "height": 500,
+  "autosize": "none",
+
   "params": [
     {
       "name": "zoom_level",
@@ -10,7 +12,7 @@
       "bind": {
         "input": "range",
         "min": 140,
-        "max": 1000,
+        "max": 60000,
         "step": 1,
         "name": "Zoom: "
       }
@@ -24,15 +26,13 @@
       "bind": {
         "input": "select",
         "options": [
-          [0, 0],
-          [7.449624, 15.719247],
+          [4.684379   ,17.806481],
           [53.919408  ,85.619606],
           [56.134075  ,15.533798],
           [49.344586  ,-102.777709],
           [-19.585854 ,-60.477626]
         ],
         "labels": [
-          "Global",
           "Africa",
           "Asia",
           "Europe",
@@ -43,8 +43,85 @@
       }
     }
   ],
+
+
+  "signals": [
+    { "name": "tx", "update": "width / 2" },
+    { "name": "ty", "update": "height / 2" },
+    {
+      "name": "scale",
+      "value": 150,
+      "on": [{
+        "events": {"type": "wheel", "consume": true},
+        "update": "clamp(scale * pow(1.0005, -event.deltaY * pow(16, event.deltaMode)), 150, 3000)"
+      }]
+    },
+    {
+      "name": "angles",
+      "value": [0, 0],
+      "on": [{
+        "events": "mousedown",
+        "update": "[rotateX, centerY]"
+      }]
+    },
+    {
+      "name": "cloned",
+      "value": null,
+      "on": [{
+        "events": "mousedown",
+        "update": "copy('projection')"
+      }]
+    },
+    {
+      "name": "start",
+      "value": null,
+      "on": [{
+        "events": "mousedown",
+        "update": "invert(cloned, xy())"
+      }]
+    },
+    {
+      "name": "drag", "value": null,
+      "on": [{
+        "events": "[mousedown, window:mouseup] > window:mousemove",
+        "update": "invert(cloned, xy())"
+      }]
+    },
+    {
+      "name": "delta", "value": null,
+      "on": [{
+        "events": {"signal": "drag"},
+        "update": "[drag[0] - start[0], start[1] - drag[1]]"
+      }]
+    },
+    {
+      "name": "rotateX", "value": 0,
+      "on": [{
+        "events": {"signal": "delta"},
+        "update": "angles[0] + delta[0]"
+      }]
+    },
+    {
+      "name": "centerY", "value": 0,
+      "on": [{
+        "events": {"signal": "delta"},
+        "update": "clamp(angles[1] + delta[1], -60, 60)"
+      }]
+    }
+  ],
+
+  "projections": [
+    {
+      "name": "projection",
+      "type": "mercator",
+      "scale": {"signal": "scale"},
+      "rotate": [{"signal": "rotateX"}, 0, 0],
+      "center": [0, {"signal": "centerY"}],
+      "translate": [{"signal": "tx"}, {"signal": "ty"}]
+    }
+  ],
   "projection": {
-    "type": "equirectangular",
+    "type": "equalEarth",
     "center": {
       "expr": "center_to"
     },
@@ -52,181 +129,54 @@
       "expr": "zoom_level"
     }
   },
-  "data": {
-    "url": "https://raw.githubusercontent.com/tinker23r/FIT3179-public/main/Homework_9/js/ne_110m_admin_0_countries.topojson",
-    "format": {
-      "type": "topojson",
-      "feature": "ne_110m_admin_0_countries"
+
+  "data": [
+    {
+      "name": "world",
+      "url": "../js/ne_110m_admin_0_countries.topojson",
+      "format": {
+        "type": "topojson",
+        "feature": "ne_110m_admin_0_countries"
+      }
+    },
+    {
+      "name": "graticule",
+      "url": "../js/WorldMapWithGraticules.topojson",
+      "format": {
+        "type": "topojson",
+        "feature": "ne_110m_graticules_30"
+      }
     }
-  },
-  "layer": [
+  ],
+
+  "marks": [
     {
-      "data": {
-        "url": "https://raw.githubusercontent.com/tinker23r/FIT3179-public/main/Homework_9/js/oceans.topojson",
-        "format": {
-          "type": "topojson",
-          "feature": "oceans"
+      "type": "shape",
+      "from": {"data": "graticule"},
+      "encode": {
+        "enter": {
+          "strokeWidth": {"value": 1},
+          "stroke": {"value": "#ddd"},
+          "fill": {"value": null}
         }
       },
-      "mark": {
-        "type": "geoshape",
-        "fill": "skyblue",
-        "opacity": 0.5
-      }
-    },
-    {
-      "data": {
-        "url": "https://raw.githubusercontent.com/tinker23r/FIT3179-public/main/Homework_9/js/WorldMapWithGraticules.topojson",
-        "format": {
-          "type": "topojson",
-          "feature": "ne_110m_graticules_30"
-        }
-      },
-      "mark": {
-        "type": "geoshape",
-        "fill": null,
-        "stroke": "lightgray"
-      }
-    },
-    {
-      "mark": {
-        "type": "geoshape",
-        "stroke": "black",
-        "strokeWidth": 0.3,
-        "fill": "white"
-      }
-    },
-    {
       "transform": [
-        {
-          "lookup": "properties.NAME",
-          "from": {
-            "data": {
-              "url": "https://raw.githubusercontent.com/tinker23r/FIT3179-public/main/Homework_9/Data/iphone-market-share-by-country-2023.csv"
-            },
-            "key": "country",
-            "fields": [
-              "iosMarketShare",
-              "androidMarketShare",
-              "pop2023"
-            ]
-          }
-        },
-        {
-          "lookup": "properties.NAME",
-          "from": {
-            "data": {
-              "url": "https://raw.githubusercontent.com/tinker23r/FIT3179-public/main/Homework_9/Data/cell-phones-by-country-2023.csv"
-            },
-            "key": "country",
-            "fields": [
-              "numUsers",
-              "linesPer100",
-              "pop2023"
-            ]
-          }
-        },
-        {
-          "lookup": "properties.NAME",
-          "from": {
-            "data": {
-              "url": "https://raw.githubusercontent.com/tinker23r/FIT3179-public/main/Homework_9/js/average-latitude-longitude-countries.csv"
-            },
-            "key": "Country",
-            "fields": [
-              "Latitude",
-              "Longitude"
-            ]
-          }
-        },
-        {
-          "calculate": "datum.iosMarketShare > datum.androidMarketShare ? 'IOS' : 'Android'",
-          "as": "Market Dominator"
-        },
-        {
-          "calculate": "datum.iosMarketShare > datum.androidMarketShare ? datum.iosMarketShare : datum.androidMarketShare",
-          "as": "market leader value"
+        { "type": "geoshape", "projection": "projection" }
+      ]
+    },
+    {
+      "type": "shape",
+      "from": {"data": "world"},
+      "encode": {
+        "enter": {
+          "strokeWidth": {"value": 0.5},
+          "stroke": {"value": "#bbb"},
+          "fill": {"value": "#e5e8d3"}
         }
-      ],
-      "mark": {
-        "type": "circle",
-        "opacity": 0.6
       },
-      "encoding": {
-        "tooltip": [
-          {
-            "field": "properties.NAME",
-            "title": "Country"
-          },
-          {
-            "field": "iosMarketShare",
-            "type": "quantitative",
-            "title": "IOS Market Share"
-          },
-          {
-            "field": "androidMarketShare",
-            "type": "quantitative",
-            "title": "Android Market Share"
-          },
-          {
-            "field": "numUsers",
-            "title": "Total Smartphones"
-          }
-        ],
-        "color": {
-          "field": "Market Dominator",
-          "type": "nominal",
-          "scale": {
-            "domain": [
-              "IOS",
-              "Android"
-            ],
-            "range": [
-              "#af8dc3",
-              "#008000"
-            ]
-          }
-        },
-        "opacity": {
-          "field": "market leader value",
-          "type": "quantitative",
-          "scale": {
-            "domain": [
-              50,
-              100
-            ],
-            "range": [
-              0.25,
-              0.95
-            ]
-          },
-          "title": "% of Market"
-        },
-        "latitude": {
-          "field": "Latitude",
-          "type": "quantitative"
-        },
-        "longitude": {
-          "field": "Longitude",
-          "type": "quantitative"
-        },
-        "size": {
-          "legend": null,
-          "field": "numUsers",
-          "type": "quantitative",
-          "scale": {
-            "type": "sqrt",
-            "domain": [
-              0,
-              100
-            ],
-            "range": [
-              0,
-              1
-            ]
-          }
-        }
-      }
+      "transform": [
+        { "type": "geoshape", "projection": "projection" }
+      ]
     }
   ]
 }
