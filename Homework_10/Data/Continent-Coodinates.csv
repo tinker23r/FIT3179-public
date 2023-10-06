@@ -1,6 +1,6 @@
-"Continent"   ,"Latitude" ,"Longitude"
-Africa        ,4.684379   ,17.806481
-Asia          ,53.919408  ,85.619606
-Europe        ,56.134075  ,15.533798
-North America ,49.344586  ,-102.777709
-South America ,-19.585854 ,-60.477626
+"Continent","Latitude","Longitude"
+Africa,4.684379,17.806481
+Asia,53.919408,85.619606
+Europe,56.134075,15.533798
+North America,49.344586,-102.777709
+South America,-19.585854,-60.477626

@@ -1,56 +1,16 @@
 {
   "$schema": "https://vega.github.io/schema/vega/v5.json",
   "description": "An interactive world map supporting pan and zoom.",
-  "width": 900,
-  "height": 500,
+  "width": 800,
+  "height": 400,
   "autosize": "none",
-
-  "params": [
-    {
-      "name": "zoom_level",
-      "value": 140,
-      "bind": {
-        "input": "range",
-        "min": 140,
-        "max": 60000,
-        "step": 1,
-        "name": "Zoom: "
-      }
-    },
-    {
-      "name": "center_to",
-      "value": [
-        0,
-        0
-      ],
-      "bind": {
-        "input": "select",
-        "options": [
-          [4.684379   ,17.806481],
-          [53.919408  ,85.619606],
-          [56.134075  ,15.533798],
-          [49.344586  ,-102.777709],
-          [-19.585854 ,-60.477626]
-        ],
-        "labels": [
-          "Africa",
-          "Asia",
-          "Europe",
-          "North America",
-          "South America"
-        ],
-        "name": "Map Centre: "
-      }
-    }
-  ],
-
 
   "signals": [
     { "name": "tx", "update": "width / 2" },
     { "name": "ty", "update": "height / 2" },
     {
       "name": "scale",
-      "value": 150,
+      "value": 200,
       "on": [{
         "events": {"type": "wheel", "consume": true},
         "update": "clamp(scale * pow(1.0005, -event.deltaY * pow(16, event.deltaMode)), 150, 3000)"
@@ -61,7 +21,7 @@
       "value": [0, 0],
       "on": [{
         "events": "mousedown",
-        "update": "[rotateX, centerY]"
+        "update": "[rotateX, rotateY]"
       }]
     },
     {
@@ -95,17 +55,17 @@
       }]
     },
     {
-      "name": "rotateX", "value": 0,
+      "name": "rotateX", "value": 1,
       "on": [{
         "events": {"signal": "delta"},
         "update": "angles[0] + delta[0]"
       }]
     },
     {
-      "name": "centerY", "value": 0,
+      "name": "rotateY", "value": 0,
       "on": [{
         "events": {"signal": "delta"},
-        "update": "clamp(angles[1] + delta[1], -60, 60)"
+        "update": "clamp(angles[1] + delta[1], -85, 85)"
       }]
     }
   ],
@@ -113,42 +73,62 @@
   "projections": [
     {
       "name": "projection",
-      "type": "mercator",
+      "type": "orthographic",
       "scale": {"signal": "scale"},
-      "rotate": [{"signal": "rotateX"}, 0, 0],
-      "center": [0, {"signal": "centerY"}],
+      "rotate": [{"signal": "rotateX"}, {"signal": "-rotateY"}, 0],
+      "center": [0, 0],
       "translate": [{"signal": "tx"}, {"signal": "ty"}]
     }
   ],
-  "projection": {
-    "type": "equalEarth",
-    "center": {
-      "expr": "center_to"
-    },
-    "scale": {
-      "expr": "zoom_level"
-    }
-  },
 
   "data": [
     {
+      "name": "graticule",
+      "url": "../Homework_10/js/mapbase.json",
+      "format": {
+        "type": "topojson",
+        "feature": "ne_110m_graticules_30"
+      }
+    },
+    {
+      "name": "oceans",
+      "url": "../Homework_10/js/mapbase.json",
+      "format": {
+        "type": "topojson",
+        "feature": "ne_110m_ocean"
+      }
+    },
+    {
       "name": "world",
-      "url": "../js/ne_110m_admin_0_countries.topojson",
+      "url": "../Homework_10/js/mapbase.json",
       "format": {
         "type": "topojson",
         "feature": "ne_110m_admin_0_countries"
       }
     },
     {
-      "name": "graticule",
-      "url": "../js/WorldMapWithGraticules.topojson",
-      "format": {
-        "type": "topojson",
-        "feature": "ne_110m_graticules_30"
-      }
+      "name": "market_share_by_country",
+      "url": "../Homework_10/Data/iphone-market-share-by-country-2023.csv"
+    },
+    {
+      "name": "phones_by_country",
+      "url": "../Homework_10/Data/cell-phones-by-country-2023.csv"
+    },
+    {
+      "name": "countries-lat-long",
+      "url": "../Homework_10/Data/average-latitude-longitude-countries.csv"
     }
   ],
-
+  "transform":[
+    {
+      "calculate": "datum.iosMarketShare > datum.androidMarketShare ? 'IOS' : 'Android'",
+      "as": "Market Dominator"
+    },
+    {
+      "calculate": "datum.iosMarketShare > datum.androidMarketShare ? datum.iosMarketShare : datum.androidMarketShare",
+      "as": "market leader value"
+    }
+  ],
   "marks": [
     {
       "type": "shape",
@@ -156,8 +136,21 @@
       "encode": {
         "enter": {
           "strokeWidth": {"value": 1},
-          "stroke": {"value": "#ddd"},
+          "stroke": {"value": "lightgray"},
           "fill": {"value": null}
+        }
+      },
+      "transform": [
+        { "type": "geoshape", "projection": "projection" }
+      ]
+    },
+    {
+      "type": "shape",
+      "from": {"data": "oceans"},
+      "encode": {
+        "enter": {
+          "fill": {"value": "skyblue"},
+          "opacity":{"value": 0.5}
         }
       },
       "transform": [
@@ -169,8 +162,8 @@
       "from": {"data": "world"},
       "encode": {
         "enter": {
-          "strokeWidth": {"value": 0.5},
-          "stroke": {"value": "#bbb"},
+          "strokeWidth": {"value": 0.3},
+          "stroke": {"value": "black"},
           "fill": {"value": "#e5e8d3"}
         }
       },
