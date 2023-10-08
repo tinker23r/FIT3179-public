@@ -1,0 +1,175 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "description": "An interactive world map supporting pan and zoom.",
+  "width": 800,
+  "height": 400,
+  "autosize": "none",
+
+  "signals": [
+    { "name": "tx", "update": "width / 2" },
+    { "name": "ty", "update": "height / 2" },
+    {
+      "name": "scale",
+      "value": 200,
+      "on": [{
+        "events": {"type": "wheel", "consume": true},
+        "update": "clamp(scale * pow(1.0005, -event.deltaY * pow(16, event.deltaMode)), 150, 3000)"
+      }]
+    },
+    {
+      "name": "angles",
+      "value": [0, 0],
+      "on": [{
+        "events": "mousedown",
+        "update": "[rotateX, rotateY]"
+      }]
+    },
+    {
+      "name": "cloned",
+      "value": null,
+      "on": [{
+        "events": "mousedown",
+        "update": "copy('projection')"
+      }]
+    },
+    {
+      "name": "start",
+      "value": null,
+      "on": [{
+        "events": "mousedown",
+        "update": "invert(cloned, xy())"
+      }]
+    },
+    {
+      "name": "drag", "value": null,
+      "on": [{
+        "events": "[mousedown, window:mouseup] > window:mousemove",
+        "update": "invert(cloned, xy())"
+      }]
+    },
+    {
+      "name": "delta", "value": null,
+      "on": [{
+        "events": {"signal": "drag"},
+        "update": "[drag[0] - start[0], start[1] - drag[1]]"
+      }]
+    },
+    {
+      "name": "rotateX", "value": 1,
+      "on": [{
+        "events": {"signal": "delta"},
+        "update": "angles[0] + delta[0]"
+      }]
+    },
+    {
+      "name": "rotateY", "value": 0,
+      "on": [{
+        "events": {"signal": "delta"},
+        "update": "clamp(angles[1] + delta[1], -85, 85)"
+      }]
+    }
+  ],
+
+  "projections": [
+    {
+      "name": "projection",
+      "scale": {"signal": "scale"},
+      "rotate": [{"signal": "rotateX"}, {"signal": "-rotateY"}, 0],
+      "center": [0, 0],
+      "translate": [{"signal": "tx"}, {"signal": "ty"}]
+    }
+  ],
+
+  "data": [
+    {
+      "name": "graticule",
+      "url": "../Homework_10/Data/Map_Data/mapbase.json",
+      "format": {
+        "type": "topojson",
+        "feature": "ne_110m_graticules_30"
+      }
+    },
+    {
+      "name": "oceans",
+      "url": "https://raw.githubusercontent.com/tinker23r/FIT3179-public/main/Homework_9/js/oceans.topojson",
+      "format": {
+        "type": "topojson",
+        "feature": "oceans"
+      }
+    },
+    {
+      "name": "world",
+      "url": "../Homework_10/Data/Map_Data/mapbase.json",
+      "format": {
+        "type": "topojson",
+        "feature": "ne_110m_admin_0_countries"
+      }
+    },
+    {
+      "name": "data",
+      "url": "../Homework_10/Data/Map_Data/Data.csv",
+      "format": {"type": "csv", "parse": "auto"},
+      "transform": [
+        {
+          "type": "geopoint",
+          "projection": "projection",
+          "fields": ["country_Longitude", "country_Latitude"]
+        }
+      ]
+    }
+  ],
+  "marks": [
+    {
+      "type": "shape",
+      "from": {"data": "graticule"},
+      "encode": {
+        "enter": {
+          "strokeWidth": {"value": 1},
+          "stroke": {"value": "lightgray"},
+          "fill": {"value": null}
+        }
+      },
+      "transform": [
+        { "type": "geoshape", "projection": "projection" }
+      ]
+    },
+    {
+      "type": "shape",
+      "from": {"data": "oceans"},
+      "encode": {
+        "enter": {
+          "fill": {"value": "skyblue"},
+          "opacity":{"value": 0.5}
+        }
+      },
+      "transform": [
+        { "type": "geoshape", "projection": "projection" }
+      ]
+    },
+    {
+      "type": "shape",
+      "from": {"data": "world"},
+      "encode": {
+        "enter": {
+          "strokeWidth": {"value": 0.3},
+          "stroke": {"value": "black"},
+          "fill": {"value": "#e5e8d3"}
+        }
+      },
+      "transform": [
+        { "type": "geoshape", "projection": "projection" }
+      ]
+    },
+    {
+      "type": "symbol",
+      "from": {"data": "data"},
+      "encode": {
+        "enter": {
+          "fillOpacity": {"value": 0.25},
+          "fill": {"value": "red"}
+        }
+      },
+      "update": {"x": {"field": "x"}, "y": {"field": "y"}}
+    }
+  ]
+}

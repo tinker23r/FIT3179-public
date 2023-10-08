@@ -15,11 +15,32 @@
 
 <body>
 
+  <div id="global_shipments"></div>
+
+  <script type="text/javascript">
+
+    var spec2 = "js/test.vg.json";
+    vegaEmbed('#global_shipments', spec2).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+  </script>
+
+
   <div id="ios_vs_android"></div>
 
   <script type="text/javascript">
 
     var spec2 = "js/ios_vs_android.vg.json";
+    vegaEmbed('#ios_vs_android', spec2).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+  </script>
+
+  <div id="[broken]_ios_vs_android"></div>
+
+  <script type="text/javascript">
+
+    var spec2 = "js/[broken]_ios_vs_android.vg.json";
     vegaEmbed('#ios_vs_android', spec2).then(function (result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
