@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Market share between IOS vs Android 2023",
-  "width": 800,
+  "width": 700,
   "height": 400,
   "projection": {
     "type": "equalEarth"
@@ -116,14 +116,8 @@
           "type": "quantitative",
           "scale": {
             "type": "sqrt",
-            "domain": [
-              0,
-              100
-            ],
-            "range": [
-              0,
-              1
-            ]
+            "domain": [0,100],
+            "range": [0,1]
           }
         }
       }
