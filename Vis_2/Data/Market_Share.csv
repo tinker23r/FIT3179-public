@@ -1,0 +1,562 @@
+﻿Continent,Country,OperatingSystem,MarketShare,numUsers
+Africa,Algeria,Android,93.98,33000000
+Africa,Algeria,IOS,5.81,33000000
+Africa,Algeria,Other,0.21,33000000
+Africa,Angola,Android,83.05,#N/A
+Africa,Angola,IOS,16.13,#N/A
+Africa,Angola,Other,0.82,#N/A
+Africa,Benin,Android,85.4,#N/A
+Africa,Benin,IOS,11.04,#N/A
+Africa,Benin,Other,3.56,#N/A
+Africa,Botswana,Android,90.12,#N/A
+Africa,Botswana,IOS,9.45,#N/A
+Africa,Botswana,Other,0.43,#N/A
+Africa,Burundi,Android,84.25,#N/A
+Africa,Burundi,IOS,4.95,#N/A
+Africa,Burundi,Other,10.8,#N/A
+Africa,Cameroon,Android,84.12,#N/A
+Africa,Cameroon,IOS,13.38,#N/A
+Africa,Cameroon,Other,2.5,#N/A
+Africa,Cape Verde,Android,81.13,#N/A
+Africa,Cape Verde,IOS,18.44,#N/A
+Africa,Cape Verde,Other,0.43,#N/A
+Africa,Chad,Android,90.23,#N/A
+Africa,Chad,IOS,9.34,#N/A
+Africa,Chad,Other,0.43,#N/A
+Africa,Comoros,Android,90.66,#N/A
+Africa,Comoros,IOS,8.86,#N/A
+Africa,Comoros,Other,0.48,#N/A
+Africa,Congo,Android,82.48,#N/A
+Africa,Congo,IOS,16.43,#N/A
+Africa,Congo,Other,1.09,#N/A
+Africa,Dem. Rep. Congo,Android,75.33,#N/A
+Africa,Dem. Rep. Congo,IOS,9.53,#N/A
+Africa,Dem. Rep. Congo,Other,15.14,#N/A
+Africa,Djibouti,Android,85.38,#N/A
+Africa,Djibouti,IOS,14.32,#N/A
+Africa,Djibouti,Other,0.3,#N/A
+Africa,Egypt,Android,85.97,95340000
+Africa,Egypt,IOS,13.81,95340000
+Africa,Egypt,Other,0.22,95340000
+Africa,Equatorial Guinea,Android,74.38,#N/A
+Africa,Equatorial Guinea,IOS,24.65,#N/A
+Africa,Equatorial Guinea,Other,0.97,#N/A
+Africa,Eritrea,Android,90.94,#N/A
+Africa,Eritrea,IOS,2.57,#N/A
+Africa,Eritrea,Other,6.49,#N/A
+Africa,Ethiopia,Android,91.73,18000000
+Africa,Ethiopia,IOS,5.33,18000000
+Africa,Ethiopia,Other,2.94,18000000
+Africa,Gabon,Android,85.51,#N/A
+Africa,Gabon,IOS,13.64,#N/A
+Africa,Gabon,Other,0.85,#N/A
+Africa,Gambia,Android,77.3,#N/A
+Africa,Gambia,IOS,22.01,#N/A
+Africa,Gambia,Other,0.69,#N/A
+Africa,Ghana,Android,75.61,#N/A
+Africa,Ghana,IOS,22.93,#N/A
+Africa,Ghana,Other,1.46,#N/A
+Africa,Guinea,Android,76.05,#N/A
+Africa,Guinea,IOS,16.06,#N/A
+Africa,Guinea,Other,7.89,#N/A
+Africa,Ivory Coast,Android,73.6,#N/A
+Africa,Ivory Coast,IOS,25.18,#N/A
+Africa,Ivory Coast,Other,1.22,#N/A
+Africa,Kenya,Android,90.67,28080000
+Africa,Kenya,IOS,3.43,28080000
+Africa,Kenya,Other,5.9,28080000
+Africa,Lesotho,Android,95.2,#N/A
+Africa,Lesotho,IOS,3.8,#N/A
+Africa,Lesotho,Other,1,#N/A
+Africa,Liberia,Android,79.07,#N/A
+Africa,Liberia,IOS,15.17,#N/A
+Africa,Liberia,Other,5.76,#N/A
+Africa,Libya,Android,89.31,#N/A
+Africa,Libya,IOS,10.48,#N/A
+Africa,Libya,Other,0.21,#N/A
+Africa,Madagascar,Android,93.23,#N/A
+Africa,Madagascar,IOS,4.36,#N/A
+Africa,Madagascar,Other,2.41,#N/A
+Africa,Malawi,Android,93.17,#N/A
+Africa,Malawi,IOS,3.7,#N/A
+Africa,Malawi,Other,3.13,#N/A
+Africa,Mali,Android,80.03,#N/A
+Africa,Mali,IOS,19.27,#N/A
+Africa,Mali,Other,0.7,#N/A
+Africa,Mauritania,Android,78.81,#N/A
+Africa,Mauritania,IOS,20.98,#N/A
+Africa,Mauritania,Other,0.21,#N/A
+Africa,Mauritius,Android,87.05,#N/A
+Africa,Mauritius,IOS,12.44,#N/A
+Africa,Mauritius,Other,0.51,#N/A
+Africa,Morocco,Android,77.32,44450000
+Africa,Morocco,IOS,21.97,44450000
+Africa,Morocco,Other,0.71,44450000
+Africa,Mozambique,Android,86.86,#N/A
+Africa,Mozambique,IOS,9.95,#N/A
+Africa,Mozambique,Other,3.19,#N/A
+Africa,Namibia,Android,85.41,#N/A
+Africa,Namibia,IOS,13.86,#N/A
+Africa,Namibia,Other,0.73,#N/A
+Africa,Niger,Android,90.35,#N/A
+Africa,Niger,IOS,8.8,#N/A
+Africa,Niger,Other,0.85,#N/A
+Africa,Nigeria,Android,84.34,167371945
+Africa,Nigeria,IOS,10.94,167371945
+Africa,Nigeria,Other,4.72,167371945
+Africa,Rwanda,Android,76.43,#N/A
+Africa,Rwanda,IOS,16.56,#N/A
+Africa,Rwanda,Other,7.01,#N/A
+Africa,Sao Tome and Principe,Android,85.96,#N/A
+Africa,Sao Tome and Principe,IOS,13.74,#N/A
+Africa,Sao Tome and Principe,Other,0.3,#N/A
+Africa,Senegal,Android,74.43,#N/A
+Africa,Senegal,IOS,25.19,#N/A
+Africa,Senegal,Other,0.38,#N/A
+Africa,Seychelles,Android,59.66,#N/A
+Africa,Seychelles,IOS,40.03,#N/A
+Africa,Seychelles,Other,0.31,#N/A
+Africa,Sierra Leone,Android,85.48,#N/A
+Africa,Sierra Leone,IOS,9.67,#N/A
+Africa,Sierra Leone,Other,4.85,#N/A
+Africa,Somalia,Android,86.78,#N/A
+Africa,Somalia,IOS,12.87,#N/A
+Africa,Somalia,Other,0.35,#N/A
+Africa,South Africa,Android,83.11,59474500
+Africa,South Africa,IOS,16.5,59474500
+Africa,South Africa,Other,0.39,59474500
+Africa,Sudan,Android,88.61,#N/A
+Africa,Sudan,IOS,6.9,#N/A
+Africa,Sudan,Other,4.49,#N/A
+Africa,Tanzania,Android,78.46,#N/A
+Africa,Tanzania,IOS,7.75,#N/A
+Africa,Tanzania,Other,13.79,#N/A
+Africa,Togo,Android,89.09,#N/A
+Africa,Togo,IOS,9.71,#N/A
+Africa,Togo,Other,1.2,#N/A
+Africa,Tunisia,Android,91.56,#N/A
+Africa,Tunisia,IOS,8.13,#N/A
+Africa,Tunisia,Other,0.31,#N/A
+Africa,Uganda,Android,78.26,#N/A
+Africa,Uganda,IOS,6.53,#N/A
+Africa,Uganda,Other,15.21,#N/A
+Africa,Zambia,Android,87.38,#N/A
+Africa,Zambia,IOS,8.98,#N/A
+Africa,Zambia,Other,3.64,#N/A
+Africa,Zimbabwe,Android,84.87,13518887
+Africa,Zimbabwe,IOS,13.36,13518887
+Africa,Zimbabwe,Other,1.77,13518887
+Asia,Afghanistan,Android,79.74,#N/A
+Asia,Afghanistan,IOS,19.89,#N/A
+Asia,Afghanistan,Other,0.37,#N/A
+Asia,Bahrain,Android,67.96,#N/A
+Asia,Bahrain,IOS,31.76,#N/A
+Asia,Bahrain,Other,0.28,#N/A
+Asia,Bangladesh,Android,95.74,165615000
+Asia,Bangladesh,IOS,3.7,165615000
+Asia,Bangladesh,Other,0.56,165615000
+Asia,Bhutan,Android,87.32,#N/A
+Asia,Bhutan,IOS,12.58,#N/A
+Asia,Bhutan,Other,0.1,#N/A
+Asia,Brunei,Android,69.31,#N/A
+Asia,Brunei,IOS,29.66,#N/A
+Asia,Brunei,Other,1.03,#N/A
+Asia,Cambodia,Android,55.7,#N/A
+Asia,Cambodia,IOS,43.9,#N/A
+Asia,Cambodia,Other,0.4,#N/A
+Asia,China,Android,74.98,1598360000
+Asia,China,IOS,24.32,1598360000
+Asia,China,Other,0.7,1598360000
+Asia,India,Android,95.26,1281971713
+Asia,India,IOS,3.92,1281971713
+Asia,India,Other,0.82,1281971713
+Asia,Indonesia,Android,90.47,385573398
+Asia,Indonesia,IOS,9.43,385573398
+Asia,Indonesia,Other,0.1,385573398
+Asia,Iran,Android,92.93,96165000
+Asia,Iran,IOS,6.82,96165000
+Asia,Iran,Other,0.25,96165000
+Asia,Iraq,Android,76.49,#N/A
+Asia,Iraq,IOS,23.31,#N/A
+Asia,Iraq,Other,0.2,#N/A
+Asia,Israel,Android,73.83,9701200
+Asia,Israel,IOS,25.79,9701200
+Asia,Israel,Other,0.38,9701200
+Asia,Japan,Android,33.98,146649600
+Asia,Japan,IOS,65.88,146649600
+Asia,Japan,Other,0.14,146649600
+Asia,Jordan,Android,80.66,6010000
+Asia,Jordan,IOS,19.15,6010000
+Asia,Jordan,Other,0.19,6010000
+Asia,Kazakhstan,Android,74.04,#N/A
+Asia,Kazakhstan,IOS,25.76,#N/A
+Asia,Kazakhstan,Other,0.2,#N/A
+Asia,Kuwait,Android,53.49,#N/A
+Asia,Kuwait,IOS,45.9,#N/A
+Asia,Kuwait,Other,0.61,#N/A
+Asia,Kyrgyzstan,Android,87.1,#N/A
+Asia,Kyrgyzstan,IOS,12.8,#N/A
+Asia,Kyrgyzstan,Other,0.1,#N/A
+Asia,Laos,Android,80.43,#N/A
+Asia,Laos,IOS,19.32,#N/A
+Asia,Laos,Other,0.25,#N/A
+Asia,Lebanon,Android,76.52,2720000
+Asia,Lebanon,IOS,23.14,2720000
+Asia,Lebanon,Other,0.34,2720000
+Asia,Malaysia,Android,71.44,30379000
+Asia,Malaysia,IOS,27.04,30379000
+Asia,Malaysia,Other,1.52,30379000
+Asia,Maldives,Android,65.3,776716
+Asia,Maldives,IOS,34.58,776716
+Asia,Maldives,Other,0.12,776716
+Asia,Mongolia,Android,61.19,3500000
+Asia,Mongolia,IOS,38.29,3500000
+Asia,Mongolia,Other,0.52,3500000
+Asia,Myanmar,Android,88.07,#N/A
+Asia,Myanmar,IOS,11.6,#N/A
+Asia,Myanmar,Other,0.33,#N/A
+Asia,Nepal,Android,91.5,34172058
+Asia,Nepal,IOS,8.43,34172058
+Asia,Nepal,Other,0.07,34172058
+Asia,North Korea,Android,0.51,3000000
+Asia,North Korea,IOS,99.49,3000000
+Asia,North Korea,Other,0,3000000
+Asia,Oman,Android,74.4,#N/A
+Asia,Oman,IOS,25.34,#N/A
+Asia,Oman,Other,0.26,#N/A
+Asia,Pakistan,Android,93.32,165405847
+Asia,Pakistan,IOS,5.9,165405847
+Asia,Pakistan,Other,0.78,165405847
+Asia,Philippines,Android,88.95,106987098
+Asia,Philippines,IOS,10.43,106987098
+Asia,Philippines,Other,0.62,106987098
+Asia,Qatar,Android,77.13,#N/A
+Asia,Qatar,IOS,22.62,#N/A
+Asia,Qatar,Other,0.25,#N/A
+Asia,Russia,Android,73.49,256116000
+Asia,Russia,IOS,26.16,256116000
+Asia,Russia,Other,0.35,256116000
+Asia,Saudi Arabia,Android,53.87,46000000
+Asia,Saudi Arabia,IOS,46.01,46000000
+Asia,Saudi Arabia,Other,0.12,46000000
+Asia,Singapore,Android,75.24,8106700
+Asia,Singapore,IOS,24.01,8106700
+Asia,Singapore,Other,0.75,8106700
+Asia,South Korea,Android,69.83,56004887
+Asia,South Korea,IOS,29.79,56004887
+Asia,South Korea,Other,0.38,56004887
+Asia,Sri Lanka,Android,88.37,38849812
+Asia,Sri Lanka,IOS,11.41,38849812
+Asia,Sri Lanka,Other,0.22,38849812
+Asia,Syria,Android,95.87,#N/A
+Asia,Syria,IOS,3.66,#N/A
+Asia,Syria,Other,0.47,#N/A
+Asia,Tajikistan,Android,87.12,#N/A
+Asia,Tajikistan,IOS,12.58,#N/A
+Asia,Tajikistan,Other,0.3,#N/A
+Asia,Thailand,Android,72.19,69000000
+Asia,Thailand,IOS,27.47,69000000
+Asia,Thailand,Other,0.34,69000000
+Asia,Turkey,Android,83.96,72200000
+Asia,Turkey,IOS,15.74,72200000
+Asia,Turkey,Other,0.3,72200000
+Asia,Turkmenistan,Android,59.49,#N/A
+Asia,Turkmenistan,IOS,40.44,#N/A
+Asia,Turkmenistan,Other,0.07,#N/A
+Asia,United Arab Emirates,Android,73.85,17132724
+Asia,United Arab Emirates,IOS,25.83,17132724
+Asia,United Arab Emirates,Other,0.32,17132724
+Asia,Uzbekistan,Android,89.92,#N/A
+Asia,Uzbekistan,IOS,9.83,#N/A
+Asia,Uzbekistan,Other,0.25,#N/A
+Asia,Vietnam,Android,70.62,72300000
+Asia,Vietnam,IOS,28.96,72300000
+Asia,Vietnam,Other,0.42,72300000
+Asia,Yemen,Android,95.61,#N/A
+Asia,Yemen,IOS,2.17,#N/A
+Asia,Yemen,Other,2.22,#N/A
+Europe,Albania,Android,48.25,#N/A
+Europe,Albania,IOS,51.54,#N/A
+Europe,Albania,Other,0.21,#N/A
+Europe,Andorra,Android,36.75,#N/A
+Europe,Andorra,IOS,62.84,#N/A
+Europe,Andorra,Other,0.41,#N/A
+Europe,Armenia,Android,71.16,#N/A
+Europe,Armenia,IOS,28.48,#N/A
+Europe,Armenia,Other,0.36,#N/A
+Europe,Austria,Android,59.58,#N/A
+Europe,Austria,IOS,39.49,#N/A
+Europe,Austria,Other,0.93,#N/A
+Europe,Azerbaijan,Android,81.38,7000000
+Europe,Azerbaijan,IOS,17.66,7000000
+Europe,Azerbaijan,Other,0.96,7000000
+Europe,Belarus,Android,73.1,#N/A
+Europe,Belarus,IOS,26.66,#N/A
+Europe,Belarus,Other,0.24,#N/A
+Europe,Belgium,Android,54.19,11822000
+Europe,Belgium,IOS,45,11822000
+Europe,Belgium,Other,0.81,11822000
+Europe,Bosnia and Herzegovina,Android,88.58,#N/A
+Europe,Bosnia and Herzegovina,IOS,10.97,#N/A
+Europe,Bosnia and Herzegovina,Other,0.45,#N/A
+Europe,Bulgaria,Android,84.76,10454400
+Europe,Bulgaria,IOS,14.97,10454400
+Europe,Bulgaria,Other,0.27,10454400
+Europe,Croatia,Android,82.84,#N/A
+Europe,Croatia,IOS,16.67,#N/A
+Europe,Croatia,Other,0.49,#N/A
+Europe,Cyprus,Android,76.29,#N/A
+Europe,Cyprus,IOS,23.07,#N/A
+Europe,Cyprus,Other,0.64,#N/A
+Europe,Czech Republic,Android,75.23,#N/A
+Europe,Czech Republic,IOS,24.21,#N/A
+Europe,Czech Republic,Other,0.56,#N/A
+Europe,Denmark,Android,35.5,7000000
+Europe,Denmark,IOS,64.04,7000000
+Europe,Denmark,Other,0.46,7000000
+Europe,Estonia,Android,62.74,1904000
+Europe,Estonia,IOS,36.74,1904000
+Europe,Estonia,Other,0.52,1904000
+Europe,Finland,Android,62.85,9470000
+Europe,Finland,IOS,36.44,9470000
+Europe,Finland,Other,0.71,9470000
+Europe,France,Android,63.94,72180000
+Europe,France,IOS,35.49,72180000
+Europe,France,Other,0.57,72180000
+Europe,Georgia,Android,73.92,#N/A
+Europe,Georgia,IOS,25.08,#N/A
+Europe,Georgia,Other,1,#N/A
+Europe,Germany,Android,59.79,107000000
+Europe,Germany,IOS,37.67,107000000
+Europe,Germany,Other,2.54,107000000
+Europe,Greece,Android,80.99,#N/A
+Europe,Greece,IOS,17.8,#N/A
+Europe,Greece,Other,1.21,#N/A
+Europe,Hungary,Android,78.25,11561890
+Europe,Hungary,IOS,21.02,11561890
+Europe,Hungary,Other,0.73,11561890
+Europe,Iceland,Android,48.19,#N/A
+Europe,Iceland,IOS,51.03,#N/A
+Europe,Iceland,Other,0.78,#N/A
+Europe,Ireland,Android,51.49,5770638
+Europe,Ireland,IOS,48.07,5770638
+Europe,Ireland,Other,0.44,5770638
+Europe,Italy,Android,70.22,88580000
+Europe,Italy,IOS,29.31,88580000
+Europe,Italy,Other,0.47,88580000
+Europe,Latvia,Android,69.83,2579000
+Europe,Latvia,IOS,29.32,2579000
+Europe,Latvia,Other,0.85,2579000
+Europe,Liechtenstein,Android,34.74,#N/A
+Europe,Liechtenstein,IOS,64.93,#N/A
+Europe,Liechtenstein,Other,0.33,#N/A
+Europe,Lithuania,Android,73.36,4940000
+Europe,Lithuania,IOS,26.03,4940000
+Europe,Lithuania,Other,0.61,4940000
+Europe,Luxembourg,Android,58.88,#N/A
+Europe,Luxembourg,IOS,40.53,#N/A
+Europe,Luxembourg,Other,0.59,#N/A
+Europe,Malta,Android,63.66,554651
+Europe,Malta,IOS,35.7,554651
+Europe,Malta,Other,0.64,554651
+Europe,Moldova,Android,79.4,#N/A
+Europe,Moldova,IOS,20.32,#N/A
+Europe,Moldova,Other,0.28,#N/A
+Europe,Monaco,Android,30.47,#N/A
+Europe,Monaco,IOS,69.42,#N/A
+Europe,Monaco,Other,0.11,#N/A
+Europe,Montenegro,Android,75.62,1117500
+Europe,Montenegro,IOS,23.98,1117500
+Europe,Montenegro,Other,0.4,1117500
+Europe,Netherlands,Android,59.02,20000000
+Europe,Netherlands,IOS,40.31,20000000
+Europe,Netherlands,Other,0.67,20000000
+Europe,Norway,Android,37.59,#N/A
+Europe,Norway,IOS,61.94,#N/A
+Europe,Norway,Other,0.47,#N/A
+Europe,Poland,Android,89.2,47153200
+Europe,Poland,IOS,10.57,47153200
+Europe,Poland,Other,0.23,47153200
+Europe,Portugal,Android,72.46,13400000
+Europe,Portugal,IOS,27.1,13400000
+Europe,Portugal,Other,0.44,13400000
+Europe,Romania,Android,77.52,26000000
+Europe,Romania,IOS,22.15,26000000
+Europe,Romania,Other,0.33,26000000
+Europe,San Marino,Android,63.69,#N/A
+Europe,San Marino,IOS,35.69,#N/A
+Europe,San Marino,Other,0.62,#N/A
+Europe,Serbia,Android,74.6,#N/A
+Europe,Serbia,IOS,25.11,#N/A
+Europe,Serbia,Other,0.29,#N/A
+Europe,Slovakia,Android,75.07,#N/A
+Europe,Slovakia,IOS,23.91,#N/A
+Europe,Slovakia,Other,1.02,#N/A
+Europe,Slovenia,Android,72.35,#N/A
+Europe,Slovenia,IOS,27.09,#N/A
+Europe,Slovenia,Other,0.56,#N/A
+Europe,Spain,Android,78.09,55740000
+Europe,Spain,IOS,21.4,55740000
+Europe,Spain,Other,0.51,55740000
+Europe,Sweden,Android,44.13,14500000
+Europe,Sweden,IOS,55.33,14500000
+Europe,Sweden,Other,0.54,14500000
+Europe,Switzerland,Android,43.21,#N/A
+Europe,Switzerland,IOS,55.92,#N/A
+Europe,Switzerland,Other,0.87,#N/A
+Europe,Ukraine,Android,81.26,57505555
+Europe,Ukraine,IOS,18.42,57505555
+Europe,Ukraine,Other,0.32,57505555
+Europe,United Kingdom,Android,47.8,83100000
+Europe,United Kingdom,IOS,51.63,83100000
+Europe,United Kingdom,Other,0.57,83100000
+Europe,Vatican City,Android,59.16,#N/A
+Europe,Vatican City,IOS,39.62,#N/A
+Europe,Vatican City,Other,1.22,#N/A
+North America,Antigua and Barbuda,Android,72.83,#N/A
+North America,Antigua and Barbuda,IOS,26.66,#N/A
+North America,Antigua and Barbuda,Other,0.51,#N/A
+North America,Bahamas,Android,49.17,#N/A
+North America,Bahamas,IOS,50.51,#N/A
+North America,Bahamas,Other,0.32,#N/A
+North America,Barbados,Android,71.44,#N/A
+North America,Barbados,IOS,27.69,#N/A
+North America,Barbados,Other,0.87,#N/A
+North America,Belize,Android,48.29,#N/A
+North America,Belize,IOS,51.41,#N/A
+North America,Belize,Other,0.3,#N/A
+North America,Canada,Android,41.53,31210628
+North America,Canada,IOS,57.84,31210628
+North America,Canada,Other,0.63,31210628
+North America,Costa Rica,Android,77.87,#N/A
+North America,Costa Rica,IOS,21.84,#N/A
+North America,Costa Rica,Other,0.29,#N/A
+North America,Cuba,Android,91.12,1300000
+North America,Cuba,IOS,8.73,1300000
+North America,Cuba,Other,0.15,1300000
+North America,Dominica,Android,82.77,#N/A
+North America,Dominica,IOS,15.76,#N/A
+North America,Dominica,Other,1.47,#N/A
+North America,Dominican Republic,Android,68.5,#N/A
+North America,Dominican Republic,IOS,31.14,#N/A
+North America,Dominican Republic,Other,0.36,#N/A
+North America,El Salvador,Android,87.48,#N/A
+North America,El Salvador,IOS,12.24,#N/A
+North America,El Salvador,Other,0.28,#N/A
+North America,Grenada,Android,74.83,#N/A
+North America,Grenada,IOS,24.86,#N/A
+North America,Grenada,Other,0.31,#N/A
+North America,Guatemala,Android,83.84,17571895
+North America,Guatemala,IOS,15.92,17571895
+North America,Guatemala,Other,0.24,17571895
+North America,Haiti,Android,85.39,#N/A
+North America,Haiti,IOS,14.52,#N/A
+North America,Haiti,Other,0.09,#N/A
+North America,Honduras,Android,80.79,#N/A
+North America,Honduras,IOS,18.74,#N/A
+North America,Honduras,Other,0.47,#N/A
+North America,Jamaica,Android,73.93,#N/A
+North America,Jamaica,IOS,25.41,#N/A
+North America,Jamaica,Other,0.66,#N/A
+North America,Mexico,Android,79.78,101339000
+North America,Mexico,IOS,19.93,101339000
+North America,Mexico,Other,0.29,101339000
+North America,Nicaragua,Android,88.52,#N/A
+North America,Nicaragua,IOS,11.18,#N/A
+North America,Nicaragua,Other,0.3,#N/A
+North America,Panama,Android,81.91,6900000
+North America,Panama,IOS,17.73,6900000
+North America,Panama,Other,0.36,6900000
+North America,Saint Kitts and Nevis,Android,69.52,#N/A
+North America,Saint Kitts and Nevis,IOS,29.8,#N/A
+North America,Saint Kitts and Nevis,Other,0.68,#N/A
+North America,Saint Lucia,Android,76.77,#N/A
+North America,Saint Lucia,IOS,22.9,#N/A
+North America,Saint Lucia,Other,0.33,#N/A
+North America,Saint Vincent and the Grenadines,Android,79.15,#N/A
+North America,Saint Vincent and the Grenadines,IOS,20.06,#N/A
+North America,Saint Vincent and the Grenadines,Other,0.79,#N/A
+North America,Trinidad and Tobago,Android,75.8,2060000
+North America,Trinidad and Tobago,IOS,23.09,2060000
+North America,Trinidad and Tobago,Other,1.11,2060000
+North America,United States of America,Android,42.94,327577529
+North America,United States of America,IOS,56.74,327577529
+North America,United States of America,Other,0.32,327577529
+Oceania,Australia,Android,41.15,20570000
+Oceania,Australia,IOS,57.47,20570000
+Oceania,Australia,Other,1.38,20570000
+Oceania,Fiji,Android,89.07,#N/A
+Oceania,Fiji,IOS,10.58,#N/A
+Oceania,Fiji,Other,0.35,#N/A
+Oceania,Kiribati,Android,95.88,#N/A
+Oceania,Kiribati,IOS,3.85,#N/A
+Oceania,Kiribati,Other,0.27,#N/A
+Oceania,Marshall Islands,Android,86.74,#N/A
+Oceania,Marshall Islands,IOS,13.08,#N/A
+Oceania,Marshall Islands,Other,0.18,#N/A
+Oceania,Micronesia,Android,74.64,#N/A
+Oceania,Micronesia,IOS,24.89,#N/A
+Oceania,Micronesia,Other,0.47,#N/A
+Oceania,Nauru,Android,94.39,#N/A
+Oceania,Nauru,IOS,5.49,#N/A
+Oceania,Nauru,Other,0.12,#N/A
+Oceania,New Zealand,Android,52.27,4761000
+Oceania,New Zealand,IOS,46.34,4761000
+Oceania,New Zealand,Other,1.39,4761000
+Oceania,Palau,Android,66.75,#N/A
+Oceania,Palau,IOS,32.95,#N/A
+Oceania,Palau,Other,0.3,#N/A
+Oceania,Papua New Guinea,Android,96.87,#N/A
+Oceania,Papua New Guinea,IOS,2.83,#N/A
+Oceania,Papua New Guinea,Other,0.3,#N/A
+Oceania,Samoa,Android,84.21,#N/A
+Oceania,Samoa,IOS,15.5,#N/A
+Oceania,Samoa,Other,0.29,#N/A
+Oceania,Solomon Islands,Android,93.93,#N/A
+Oceania,Solomon Islands,IOS,5.84,#N/A
+Oceania,Solomon Islands,Other,0.23,#N/A
+Oceania,Tonga,Android,79.4,#N/A
+Oceania,Tonga,IOS,20.14,#N/A
+Oceania,Tonga,Other,0.46,#N/A
+Oceania,Tuvalu,Android,95.17,#N/A
+Oceania,Tuvalu,IOS,4.83,#N/A
+Oceania,Tuvalu,Other,0,#N/A
+Oceania,Vanuatu,Android,91.48,#N/A
+Oceania,Vanuatu,IOS,7.54,#N/A
+Oceania,Vanuatu,Other,0.98,#N/A
+South America,Argentina,Android,91.82,56725200
+South America,Argentina,IOS,7.97,56725200
+South America,Argentina,Other,0.21,56725200
+South America,Bolivia,Android,94.22,#N/A
+South America,Bolivia,IOS,5.37,#N/A
+South America,Bolivia,Other,0.41,#N/A
+South America,Brazil,Android,85.33,284200000
+South America,Brazil,IOS,14.45,284200000
+South America,Brazil,Other,0.22,284200000
+South America,Chile,Android,82.9,21000000
+South America,Chile,IOS,16.76,21000000
+South America,Chile,Other,0.34,21000000
+South America,Colombia,Android,88.4,57900472
+South America,Colombia,IOS,11.24,57900472
+South America,Colombia,Other,0.36,57900472
+South America,Ecuador,Android,86.22,15900000
+South America,Ecuador,IOS,13.35,15900000
+South America,Ecuador,Other,0.43,15900000
+South America,Guyana,Android,81.77,#N/A
+South America,Guyana,IOS,17.55,#N/A
+South America,Guyana,Other,0.68,#N/A
+South America,Paraguay,Android,92.44,#N/A
+South America,Paraguay,IOS,7.34,#N/A
+South America,Paraguay,Other,0.22,#N/A
+South America,Peru,Android,91.36,34235000
+South America,Peru,IOS,8.14,34235000
+South America,Peru,Other,0.5,34235000
+South America,Suriname,Android,80.44,#N/A
+South America,Suriname,IOS,18.62,#N/A
+South America,Suriname,Other,0.94,#N/A
+South America,Uruguay,Android,83.8,#N/A
+South America,Uruguay,IOS,16.01,#N/A
+South America,Uruguay,Other,0.19,#N/A
+South America,Venezuela,Android,93.83,32019086
+South America,Venezuela,IOS,5.85,32019086
+South America,Venezuela,Other,0.32,32019086

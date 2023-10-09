@@ -1,0 +1,195 @@
+﻿Country,numUsers,iosMarketShare,androidMarketShare,latitude,longitude,Market_Dominator,market_leader_value
+Algeria,33000000,5.81,93.98,28,3,Android,93.98
+Angola,,16.13,83.05,-12.5,18.5,Android,83.05
+Benin,,11.04,85.4,9.5,2.25,Android,85.4
+Botswana,,9.45,90.12,-22,24,Android,90.12
+Burkina,,,,,,Android,
+Burundi,,4.95,84.25,-3.5,30,Android,84.25
+Cameroon,,13.38,84.12,6,12,Android,84.12
+Cape Verde,,18.44,81.13,16,-24,Android,81.13
+Central African Republic,,,,7,21,Android,
+Chad,,9.34,90.23,15,19,Android,90.23
+Comoros,,8.86,90.66,-12.17,44.25,Android,90.66
+Congo,,16.43,82.48,-1,15,Android,82.48
+Dem. Rep. Congo,,9.53,75.33,,,Android,75.33
+Djibouti,,14.32,85.38,11.5,43,Android,85.38
+Egypt,95340000,13.81,85.97,27,30,Android,85.97
+Equatorial Guinea,,24.65,74.38,2,10,Android,74.38
+Eritrea,,2.57,90.94,15,39,Android,90.94
+Ethiopia,18000000,5.33,91.73,8,38,Android,91.73
+Gabon,,13.64,85.51,-1,11.75,Android,85.51
+Gambia,,22.01,77.3,13.47,-16.57,Android,77.3
+Ghana,,22.93,75.61,8,-2,Android,75.61
+Guinea,,16.06,76.05,11,-10,Android,76.05
+Guinea-Bissau,,,,12,-15,Android,
+Ivory Coast,,25.18,73.6,,,Android,73.6
+Kenya,28080000,3.43,90.67,1,38,Android,90.67
+Lesotho,,3.8,95.2,-29.5,28.5,Android,95.2
+Liberia,,15.17,79.07,6.5,-9.5,Android,79.07
+Libya,,10.48,89.31,,,Android,89.31
+Madagascar,,4.36,93.23,-20,47,Android,93.23
+Malawi,,3.7,93.17,-13.5,34,Android,93.17
+Mali,,19.27,80.03,17,-4,Android,80.03
+Mauritania,,20.98,78.81,20,-12,Android,78.81
+Mauritius,,12.44,87.05,-20.28,57.55,Android,87.05
+Morocco,44450000,21.97,77.32,32,-5,Android,77.32
+Mozambique,,9.95,86.86,-18.25,35,Android,86.86
+Namibia,,13.86,85.41,-22,17,Android,85.41
+Niger,,8.8,90.35,16,8,Android,90.35
+Nigeria,167371945,10.94,84.34,10,8,Android,84.34
+Rwanda,,16.56,76.43,-2,30,Android,76.43
+Sao Tome and Principe,,13.74,85.96,1,7,Android,85.96
+Senegal,,25.19,74.43,14,-14,Android,74.43
+Seychelles,,40.03,59.66,-4.58,55.67,Android,59.66
+Sierra Leone,,9.67,85.48,8.5,-11.5,Android,85.48
+Somalia,,12.87,86.78,10,49,Android,86.78
+South Africa,59474500,16.5,83.11,-29,24,Android,83.11
+South Sudan,,,,,,Android,
+Sudan,,6.9,88.61,15,30,Android,88.61
+Swaziland,,,,-26.5,31.5,Android,
+Tanzania,,7.75,78.46,,,Android,78.46
+Togo,,9.71,89.09,8,1.17,Android,89.09
+Tunisia,,8.13,91.56,34,9,Android,91.56
+Uganda,,6.53,78.26,1,32,Android,78.26
+Zambia,,8.98,87.38,-15,30,Android,87.38
+Zimbabwe,13518887,13.36,84.87,-20,30,Android,84.87
+Afghanistan,,19.89,79.74,33,65,Android,79.74
+Bahrain,,31.76,67.96,26,50.55,Android,67.96
+Bangladesh,165615000,3.7,95.74,24,90,Android,95.74
+Bhutan,,12.58,87.32,27.5,90.5,Android,87.32
+Brunei,,29.66,69.31,,,Android,69.31
+Myanmar,,11.6,88.07,22,98,Android,88.07
+Cambodia,,43.9,55.7,13,105,Android,55.7
+China,1598360000,24.32,74.98,35,105,Android,74.98
+East Timor,,,,,,Android,
+India,1281971713,3.92,95.26,20,77,Android,95.26
+Indonesia,385573398,9.43,90.47,-5,120,Android,90.47
+Iran,96165000,6.82,92.93,32,53,Android,92.93
+Iraq,,23.31,76.49,33,44,Android,76.49
+Israel,9701200,25.79,73.83,31.5,34.75,Android,73.83
+Japan,146649600,65.88,33.98,36,138,IOS,65.88
+Jordan,6010000,19.15,80.66,31,36,Android,80.66
+Kazakhstan,,25.76,74.04,48,68,Android,74.04
+North Korea,3000000,99.49,0.51,40,127,IOS,99.49
+South Korea,56004887,29.79,69.83,37,127.5,Android,69.83
+Kuwait,,45.9,53.49,29.34,47.66,Android,53.49
+Kyrgyzstan,,12.8,87.1,41,75,Android,87.1
+Laos,,19.32,80.43,,,Android,80.43
+Lebanon,2720000,23.14,76.52,33.83,35.83,Android,76.52
+Malaysia,30379000,27.04,71.44,2.5,112.5,Android,71.44
+Maldives,776716,34.58,65.3,3.25,73,Android,65.3
+Mongolia,3500000,38.29,61.19,46,105,Android,61.19
+Nepal,34172058,8.43,91.5,28,84,Android,91.5
+Oman,,25.34,74.4,21,57,Android,74.4
+Pakistan,165405847,5.9,93.32,30,70,Android,93.32
+Philippines,106987098,10.43,88.95,13,122,Android,88.95
+Qatar,,22.62,77.13,25.5,51.25,Android,77.13
+Russia,256116000,26.16,73.49,60,100,Android,73.49
+Saudi Arabia,46000000,46.01,53.87,25,45,Android,53.87
+Singapore,8106700,24.01,75.24,1.37,103.8,Android,75.24
+Sri Lanka,38849812,11.41,88.37,7,81,Android,88.37
+Syria,,3.66,95.87,,,Android,95.87
+Tajikistan,,12.58,87.12,39,71,Android,87.12
+Thailand,69000000,27.47,72.19,15,100,Android,72.19
+Turkey,72200000,15.74,83.96,39,35,Android,83.96
+Turkmenistan,,40.44,59.49,40,60,Android,59.49
+United Arab Emirates,17132724,25.83,73.85,24,54,Android,73.85
+Uzbekistan,,9.83,89.92,41,64,Android,89.92
+Vietnam,72300000,28.96,70.62,16,106,Android,70.62
+Yemen,,2.17,95.61,15,48,Android,95.61
+Albania,,51.54,48.25,41,20,IOS,51.54
+Andorra,,62.84,36.75,42.5,1.5,IOS,62.84
+Armenia,,28.48,71.16,40,45,Android,71.16
+Austria,,39.49,59.58,47.33,13.33,Android,59.58
+Azerbaijan,7000000,17.66,81.38,40.5,47.5,Android,81.38
+Belarus,,26.66,73.1,53,28,Android,73.1
+Belgium,11822000,45,54.19,50.83,4,Android,54.19
+Bosnia and Herzegovina,,10.97,88.58,44,18,Android,88.58
+Bulgaria,10454400,14.97,84.76,43,25,Android,84.76
+Croatia,,16.67,82.84,45.17,15.5,Android,82.84
+Cyprus,,23.07,76.29,35,33,Android,76.29
+Czech Republic,,24.21,75.23,49.75,15.5,Android,75.23
+Denmark,7000000,64.04,35.5,56,10,IOS,64.04
+Estonia,1904000,36.74,62.74,59,26,Android,62.74
+Finland,9470000,36.44,62.85,64,26,Android,62.85
+France,72180000,35.49,63.94,46,2,Android,63.94
+Georgia,,25.08,73.92,42,43.5,Android,73.92
+Germany,107000000,37.67,59.79,51,9,Android,59.79
+Greece,,17.8,80.99,39,22,Android,80.99
+Hungary,11561890,21.02,78.25,47,20,Android,78.25
+Iceland,,51.03,48.19,65,-18,IOS,51.03
+Ireland,5770638,48.07,51.49,53,-8,Android,51.49
+Italy,88580000,29.31,70.22,42.83,12.83,Android,70.22
+Latvia,2579000,29.32,69.83,57,25,Android,69.83
+Liechtenstein,,64.93,34.74,47.17,9.53,IOS,64.93
+Lithuania,4940000,26.03,73.36,56,24,Android,73.36
+Luxembourg,,40.53,58.88,49.75,6.17,Android,58.88
+Macedonia,,,,41.83,22,Android,
+Malta,554651,35.7,63.66,35.83,14.58,Android,63.66
+Moldova,,20.32,79.4,,,Android,79.4
+Monaco,,69.42,30.47,43.73,7.4,IOS,69.42
+Montenegro,1117500,23.98,75.62,42,19,Android,75.62
+Netherlands,20000000,40.31,59.02,52.5,5.75,Android,59.02
+Norway,,61.94,37.59,62,10,IOS,61.94
+Poland,47153200,10.57,89.2,52,20,Android,89.2
+Portugal,13400000,27.1,72.46,39.5,-8,Android,72.46
+Romania,26000000,22.15,77.52,46,25,Android,77.52
+San Marino,,35.69,63.69,43.77,12.42,Android,63.69
+Serbia,,25.11,74.6,44,21,Android,74.6
+Slovakia,,23.91,75.07,48.67,19.5,Android,75.07
+Slovenia,,27.09,72.35,46,15,Android,72.35
+Spain,55740000,21.4,78.09,40,-4,Android,78.09
+Sweden,14500000,55.33,44.13,62,15,IOS,55.33
+Switzerland,,55.92,43.21,47,8,IOS,55.92
+Ukraine,57505555,18.42,81.26,49,32,Android,81.26
+United Kingdom,83100000,51.63,47.8,54,-2,IOS,51.63
+Vatican City,,39.62,59.16,,,Android,59.16
+Antigua and Barbuda,,26.66,72.83,17.05,-61.8,Android,72.83
+Bahamas,,50.51,49.17,24.25,-76,IOS,50.51
+Barbados,,27.69,71.44,13.17,-59.53,Android,71.44
+Belize,,51.41,48.29,17.25,-88.75,IOS,51.41
+Canada,31210628,57.84,41.53,60,-95,IOS,57.84
+Costa Rica,,21.84,77.87,10,-84,Android,77.87
+Cuba,1300000,8.73,91.12,21.5,-80,Android,91.12
+Dominica,,15.76,82.77,15.42,-61.33,Android,82.77
+Dominican Republic,,31.14,68.5,19,-70.67,Android,68.5
+El Salvador,,12.24,87.48,13.83,-88.92,Android,87.48
+Grenada,,24.86,74.83,12.12,-61.67,Android,74.83
+Guatemala,17571895,15.92,83.84,15.5,-90.25,Android,83.84
+Haiti,,14.52,85.39,19,-72.42,Android,85.39
+Honduras,,18.74,80.79,15,-86.5,Android,80.79
+Jamaica,,25.41,73.93,18.25,-77.5,Android,73.93
+Mexico,101339000,19.93,79.78,23,-102,Android,79.78
+Nicaragua,,11.18,88.52,13,-85,Android,88.52
+Panama,6900000,17.73,81.91,9,-80,Android,81.91
+Saint Kitts and Nevis,,29.8,69.52,17.33,-62.75,Android,69.52
+Saint Lucia,,22.9,76.77,13.88,-61.13,Android,76.77
+Saint Vincent and the Grenadines,,20.06,79.15,13.25,-61.2,Android,79.15
+Trinidad and Tobago,2060000,23.09,75.8,11,-61,Android,75.8
+United States of America,327577529,56.74,42.94,38,-97,IOS,56.74
+Australia,20570000,57.47,41.15,-27,133,IOS,57.47
+Fiji,,10.58,89.07,-18,175,Android,89.07
+Kiribati,,3.85,95.88,1.42,173,Android,95.88
+Marshall Islands,,13.08,86.74,9,168,Android,86.74
+Micronesia,,24.89,74.64,,,Android,74.64
+Nauru,,5.49,94.39,-0.53,166.92,Android,94.39
+New Zealand,4761000,46.34,52.27,-41,174,Android,52.27
+Palau,,32.95,66.75,7.5,134.5,Android,66.75
+Papua New Guinea,,2.83,96.87,-6,147,Android,96.87
+Samoa,,15.5,84.21,-13.58,-172.33,Android,84.21
+Solomon Islands,,5.84,93.93,-8,159,Android,93.93
+Tonga,,20.14,79.4,-20,-175,Android,79.4
+Tuvalu,,4.83,95.17,-8,178,Android,95.17
+Vanuatu,,7.54,91.48,-16,167,Android,91.48
+Argentina,56725200,7.97,91.82,-34,-64,Android,91.82
+Bolivia,,5.37,94.22,-17,-65,Android,94.22
+Brazil,284200000,14.45,85.33,-10,-55,Android,85.33
+Chile,21000000,16.76,82.9,-30,-71,Android,82.9
+Colombia,57900472,11.24,88.4,4,-72,Android,88.4
+Ecuador,15900000,13.35,86.22,-2,-77.5,Android,86.22
+Guyana,,17.55,81.77,5,-59,Android,81.77
+Paraguay,,7.34,92.44,-23,-58,Android,92.44
+Peru,34235000,8.14,91.36,-10,-76,Android,91.36
+Suriname,,18.62,80.44,4,-56,Android,80.44
+Uruguay,,16.01,83.8,-33,-56,Android,83.8
+Venezuela,32019086,5.85,93.83,8,-66,Android,93.83
