@@ -1,0 +1,78 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "IOS vs Android Market Share by Continent",
+  "width": 600,
+  "height": 400,
+  "params": [
+    {
+      "name": "selected_continent",
+      "value": "Oceania",
+      "bind": {
+      "input": "select",
+      "options": ["Africa", "Asia", "Europe", "North America", "Oceania", "South America"],
+      "name": "Continent: "
+      }
+    }
+  ],
+  "data": {
+    "url": "../Homework_10/Data/Market_Share.csv"
+  },
+  "transform": [
+    {"filter": "datum.Continent == selected_continent"}
+  ],
+  "encoding": {"y": {"field": "Country"}},
+  "layer": [
+    {
+      "mark": "bar",
+      "encoding": {
+        "x": {
+          "aggregate": "sum", "field": "MarketShare",
+          "title": "Market Share",
+          "stack":"normalize"
+        },
+        "y": {"field": "Country"},
+        "tooltip": [
+          {
+            "field": "Country",
+            "title": "Country"
+          },
+          {
+            "field": "MarketShare",
+            "type": "quantitative",
+            "title": "Market Share (%)"
+          },
+          {
+            "field": "numUsers",
+            "title": "Total Smartphones"
+          }
+        ],
+        "color": {
+          "field": "OperatingSystem",
+          "type": "nominal",
+          "scale": {
+            "domain": ["Android", "IOS","Other"],
+            "range": ["#498d00", "#E0BFB8 ","#808080"]
+          }
+        }
+      }
+    },
+    {
+      "mark": {"type": "text", "opacity": 0.9, "color": "black"},
+      "encoding": {
+        "x": {
+          "aggregate": "sum", "field": "MarketShare",
+          "title": "Market Share",
+          "stack":  "normalize",
+          "bandPosition": 0.5
+        },
+        "text": {
+          "aggregate": "sum", "field": "MarketShare",
+          "title": "Market Share"
+        },
+        "detail": {
+          "field": "OperatingSystem"
+        }
+      }
+    }
+  ]
+}

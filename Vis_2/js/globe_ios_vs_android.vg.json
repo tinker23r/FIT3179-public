@@ -1,0 +1,227 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "width": 800,
+  "height": 400,
+  "title": "Market share between IOS vs Android 2023",
+
+  "signals": [
+    { "name": "tx", "update": "width / 2" },
+    { "name": "ty", "update": "height / 2" },
+    {
+      "name": "scale",
+      "value": 150,
+      "on": [{
+        "events": {"type": "wheel", "consume": true},
+        "update": "clamp(scale * pow(1.001, -event.deltaY * pow(16, event.deltaMode)), 150, 3000)"
+      }]
+    },
+    {
+      "name": "angles",
+      "value": [0, 0],
+      "on": [{
+        "events": "pointerdown",
+        "update": "[rotateX, centerY]"
+      }]
+    },
+    {
+      "name": "cloned",
+      "value": null,
+      "on": [{
+        "events": "pointerdown",
+        "update": "copy('projection')"
+      }]
+    },
+    {
+      "name": "start",
+      "value": null,
+      "on": [{
+        "events": "pointerdown",
+        "update": "invert(cloned, xy())"
+      }]
+    },
+    {
+      "name": "drag", "value": null,
+      "on": [{
+        "events": "[pointerdown, window:pointerup] > window:pointermove",
+        "update": "invert(cloned, xy())"
+      }]
+    },
+    {
+      "name": "delta", "value": null,
+      "on": [{
+        "events": {"signal": "drag"},
+        "update": "[drag[0] - start[0], start[1] - drag[1]]"
+      }]
+    },
+    {
+      "name": "rotateX", "value": 0,
+      "on": [{
+        "events": {"signal": "delta"},
+        "update": "angles[0] + delta[0]"
+      }]
+    },
+    {
+      "name": "centerY", "value": 0,
+      "on": [{
+        "events": {"signal": "delta"},
+        "update": "clamp(angles[1] + delta[1], -60, 60)"
+      }]
+    }
+  ],
+
+  "projections": [
+    {
+      "name": "projection",
+      "type": "equalEarth",
+      "scale": {"signal": "scale"},
+      "rotate": [{"signal": "rotateX"}, 0, 0],
+      "center": [0, {"signal": "centerY"}],
+      "translate": [{"signal": "tx"}, {"signal": "ty"}]
+    }
+  ],
+  "data": [
+    {
+      "name": "graticule",
+      "url": "https://raw.githubusercontent.com/tinker23r/FIT3179-public/main/Vis_2/Data/Map_Data/mapbase.json",
+      "format": {
+        "type": "topojson",
+        "feature": "ne_110m_graticules_30"
+      }
+    },
+    {
+      "name": "oceans",
+      "url": "https://raw.githubusercontent.com/tinker23r/FIT3179-public/main/Homework_9/js/oceans.topojson",
+      "format": {
+        "type": "topojson",
+        "feature": "oceans"
+      }
+    },
+    {
+      "name": "world",
+      "url": "https://raw.githubusercontent.com/tinker23r/FIT3179-public/main/Vis_2/Data/Map_Data/mapbase.json",
+      "format": {
+        "type": "topojson",
+        "feature": "ne_110m_admin_0_countries"
+      }
+    },
+    {
+      "name": "data",
+      "url": "https://raw.githubusercontent.com/tinker23r/FIT3179-public/main/Vis_2/Data/Map_Data/Data.csv",
+      "format": {"type": "csv", "parse": "auto", "delimiter": ","},
+      "transform": [
+        { "type": "filter", "expr": "datum.latitude != null" },
+        { "type": "filter", "expr": "datum.iosMarketShare != null" },
+        { "type": "filter", "expr": "datum.numUsers != null" },
+        {
+          "type": "geopoint",
+          "projection": "projection",
+          "fields": ["longitude", "latitude"]
+        }
+      ]
+    }
+  ],
+  "marks": [
+    {
+      "type": "shape",
+      "from": {"data": "graticule"},
+      "encode": {
+        "enter": {
+          "strokeWidth": {"value": 1},
+          "stroke": {"value": "lightgray"},
+          "fill": {"value": null}
+        }
+      },
+      "transform": [
+        { "type": "geoshape", "projection": "projection" }
+      ]
+    },
+    {
+      "type": "shape",
+      "from": {"data": "oceans"},
+      "encode": {
+        "enter": {
+          "fill": {"value": "lightblue"}
+        }
+      },
+      "transform": [
+        { "type": "geoshape", "projection": "projection" }
+      ]
+    },
+    {
+      "type": "shape",
+      "from": {"data": "world"},
+      "encode": {
+        "enter": {
+          "strokeWidth": {"value": 0.3},
+          "stroke": {"value": "black"},
+          "fill": {"value": "#e5e8d3"}
+        }
+      },
+      "transform": [
+        { "type": "geoshape", "projection": "projection" }
+      ]
+    },
+    {
+      "type": "symbol",
+      "from": {"data": "data"},
+      "encode": {
+        "enter": {
+          "opacity": {"scale": "opacity", "field": "market_leader_value"},
+          "fill": {"scale": "color", "field": "Market_Dominator"},
+          "tooltip": {
+            "signal": "{\"Country\": isValid(datum[\"Country\"]) ? datum[\"Country\"] : \"\"+datum[\"Country\"], \"IOS Market Share\": format(datum[\"iosMarketShare\"], \"\"), \"Android Market Share\": format(datum[\"androidMarketShare\"], \"\"), \"Total Smartphones\": isValid(datum[\"numUsers\"]) ? datum[\"numUsers\"] : \"\"+datum[\"numUsers\"]}"
+          }
+        },
+        "update": {
+          "x": {"field": "x"}, "y": {"field": "y"},
+          "size": {"scale": "size", "field": "numUsers"}
+        }
+
+      }
+    }
+  ],
+  "scales": [
+    {
+      "name": "color",
+      "type": "ordinal",
+      "domain": ["IOS", "Android"],
+      "range": ["#E0BFB8 ", "#498d00"]
+    },
+    {
+      "name": "opacity",
+      "type": "linear",
+      "domain": [50, 100],
+      "range": [0.25, 0.95],
+      "zero": false
+    },
+    {
+      "name": "size",
+      "type": "sqrt",
+      "domain": [0, 100],
+      "range": [0, 1],
+      "zero": true
+    }
+  ],
+  "legends": [
+    {
+      "fill": "color",
+      "symbolType": "circle",
+      "title": "Market Dominator",
+      "encode": {"symbols": {"update": {"opacity": {"value": 0.6}}}}
+    },
+    {
+      "title": "% of Market",
+      "opacity": "opacity",
+      "symbolType": "circle",
+      "encode": {
+        "symbols": {
+          "update": {
+            "fill": {"value": "black"},
+            "fillOpacity": {"value": 0.6},
+            "stroke": {"value": "transparent"}
+          }
+        }
+      }
+    }
+  ]
+}
