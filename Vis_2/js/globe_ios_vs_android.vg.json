@@ -72,10 +72,10 @@
   "projections": [
     {
       "name": "projection",
-      "type": "equalEarth",
+      "type": "orthographic",
       "scale": {"signal": "scale"},
-      "rotate": [{"signal": "rotateX"}, 0, 0],
-      "center": [0, {"signal": "centerY"}],
+      "rotate": [{"signal": "rotateX"}, {"signal": "-centerY"}, 0],
+      "center": [0, 0],
       "translate": [{"signal": "tx"}, {"signal": "ty"}]
     }
   ],

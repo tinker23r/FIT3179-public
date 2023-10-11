@@ -1,0 +1,58 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {"url": "https://raw.githubusercontent.com/tinker23r/FIT3179-public/main/Vis_2/Data/Market_Cap.csv"},
+  "vconcat": [{
+    "width": 600,
+    "height": 300,
+    "mark": "line",
+    "encoding": {
+      "x": {
+        "field": "Year",
+        "type": "temporal",
+        "scale": {"domain": {"param": "brush"}},
+        "axis": {"title": ""}
+      },
+      "y": {
+        "field": "Market_cap", 
+        "type": "quantitative", 
+        "title": "Market Cap (Billions)"
+      },
+      "color": {
+        "field": "Company",
+        "type": "nominal",
+        "scale": {
+          "domain": ["Samsung", "Apple"],
+          "range": ["#498d00", "#E0BFB8"]
+        }
+      }
+    }
+  }, {
+    "width": 600,
+    "height": 100,
+    "mark": "area",
+    "params": [{
+      "name": "brush",
+      "select": {"type": "interval", "encodings": ["x"]}
+    }],
+    "encoding": {
+      "x": {
+        "field": "Year",
+        "type": "temporal"
+      },
+      "y": {
+        "title": "% Change",
+        "field": "Change",
+        "type": "quantitative",
+        "axis": {"tickCount": 3, "grid": false}
+      },
+      "color": {
+        "field": "Company",
+        "type": "nominal",
+        "scale": {
+          "domain": ["Samsung", "Apple"],
+          "range": ["#498d00", "#E0BFB8"]
+        }
+      }
+    }
+  }]
+}
