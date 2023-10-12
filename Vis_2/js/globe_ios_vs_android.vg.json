@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega/v5.json",
   "width": 800,
-  "height": 400,
+  "height": 600,
   "title": "Market share between IOS vs Android 2023",
 
   "signals": [
@@ -9,7 +9,7 @@
     { "name": "ty", "update": "height / 2" },
     {
       "name": "scale",
-      "value": 150,
+      "value": 250,
       "on": [{
         "events": {"type": "wheel", "consume": true},
         "update": "clamp(scale * pow(1.001, -event.deltaY * pow(16, event.deltaMode)), 150, 3000)"
@@ -210,7 +210,7 @@
       "encode": {"symbols": {"update": {"opacity": {"value": 0.6}}}}
     },
     {
-      "title": "% of Market",
+      "title": "Market Share %",
       "opacity": "opacity",
       "symbolType": "circle",
       "encode": {

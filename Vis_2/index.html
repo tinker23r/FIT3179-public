@@ -1,44 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
-  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPAR0023 - Visualisation 2</title>
+
+    <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
 
 
-  <!-- CSS file -->
-  <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
-
+    <!-- CSS file -->
+    <link rel="stylesheet" type="text/css" href="../Vis_2/css/styles.css" media="all">
 </head>
 
 <body>
 
-  <div id="streamgraph"></div>
-  <div id="market_cap"></div>
-  <div id="globe_ios_vs_android"></div>
+    <div class="header">
+        <h1>An overview of Apple's and Samsung's global performance</h1>
+    </div>
 
-  <script type="text/javascript">
-
-    var spec1 = "js/streamgraph.vg.json";
-    vegaEmbed('#streamgraph', spec1).then(function (result) {
-      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-    }).catch(console.error);
-
-
-    var spec2 = "js/market_cap.vg.json";
-    vegaEmbed('#market_cap', spec2).then(function (result) {
-      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-    }).catch(console.error);
-
+    <h2>Global Market Share</h2>
     
-    var spec3 = "js/globe_ios_vs_android.vg.json";
-    vegaEmbed('#globe_ios_vs_android', spec3).then(function (result) {
+    <div class="row">
+        <div class="apple_fact">
+            <h3>Apple Fact</h3>
+            Lorem ipsum dolor sit amet et amet diam et et rebum consectetuer euismod sit eos sanctus accusam laoreet lorem lorem
+        </div>
+        
+        <div id="globe_ios_vs_android"></div>            
+        
+        <div class="samsung_fact">
+            <h3>Samsung Fact</h3>
+            Lorem ipsum dolor sit amet erat amet accusam odio sadipscing ex dolores duis aliquyam amet elit aliquyam feugait lorem et
+        </div>
+    </div>
+
+    <div id="streamgraph"></div>
+
+    <div id="market_cap"></div>
+</body>
+
+<script type="text/javascript">
+    var spec1 = "js/globe_ios_vs_android.vg.json";
+    vegaEmbed('#globe_ios_vs_android', spec1).then(function (result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    var spec2 = "js/streamgraph.vg.json";
+    vegaEmbed('#streamgraph', spec2).then(function (result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
-  </script>
 
-</body>
+    var spec3 = "js/market_cap.vg.json";
+    vegaEmbed('#market_cap', spec3).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+</script>
 
 </html>
