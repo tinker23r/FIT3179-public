@@ -27,18 +27,33 @@
 }
 
 .apple_fact {
+	color: #ffffff;
 	text-align: justify;
 	float: left;
 	width: 20%;
 }
 
 .samsung_fact {
+	color: #ffffff;
 	text-align: justify;
 	float: left;
 	width: 20%;
 }
 
-.row:after {
+.globe {
+	width: 100%;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.80), rgba(0, 0, 0, 0.80));
+}
+
+.globe h2 {
+	color: #ffffff;
+	text-align: center;
+	padding-top: 1%;
+	padding-bottom: 1%;
+}
+
+.globe:after {
+	color: #ffffff;
 	content: "";
 	display: table;
 	clear: both;
