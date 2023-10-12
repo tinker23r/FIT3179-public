@@ -21,24 +21,32 @@
 
 #globe_ios_vs_android {
 	float: left;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	width: 60%;
+	width: 40%;
+	margin-left: 4%;
 }
 
-.apple_fact {
+.fact_left {
 	color: #ffffff;
 	text-align: justify;
 	float: left;
-	width: 20%;
+	width: 30%;
 }
-
-.samsung_fact {
+.fact_right {
 	color: #ffffff;
 	text-align: justify;
 	float: left;
-	width: 20%;
+	width: 26%;
 }
+
+.fact_text_left{
+	margin-left: 30%;
+	margin-top: 50%;
+}
+.fact_text_right{
+	margin-right: 30%;
+	margin-top: 50%;
+}
+
 
 .globe {
 	width: 100%;
