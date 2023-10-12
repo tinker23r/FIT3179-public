@@ -19,7 +19,7 @@
       "value": [0, 0],
       "on": [{
         "events": "pointerdown",
-        "update": "[rotateX, centerY]"
+        "update": "[rotateX, rotateY]"
       }]
     },
     {
@@ -60,7 +60,7 @@
       }]
     },
     {
-      "name": "centerY", "value": 0,
+      "name": "rotateY", "value": 0,
       "on": [{
         "events": {"signal": "delta"},
         "update": "clamp(angles[1] + delta[1], -60, 60)"
@@ -73,7 +73,7 @@
       "name": "projection",
       "type": "orthographic",
       "scale": {"signal": "scale"},
-      "rotate": [{"signal": "rotateX"}, {"signal": "-centerY"}, 0],
+      "rotate": [{"signal": "rotateX"}, {"signal": "-rotateY"}, 0],
       "center": [0, 0],
       "translate": [{"signal": "tx"}, {"signal": "ty"}]
     }
@@ -111,6 +111,9 @@
         { "type": "filter", "expr": "datum.latitude != null" },
         { "type": "filter", "expr": "datum.iosMarketShare != null" },
         { "type": "filter", "expr": "datum.numUsers != null" },
+        { 
+          "type": "filter", 
+          "expr": "(rotateX * -1) - 90 < datum.longitude && (rotateX * -1) + 90> datum.longitude && (rotateY * 1) - 90 < datum.latitude && (rotateY * 1) + 90> datum.latitude" },
         {
           "type": "geopoint",
           "projection": "projection",
