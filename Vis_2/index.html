@@ -46,6 +46,8 @@
     <div id="streamgraph"></div>
 
     <div id="market_cap"></div>
+
+    <div id="test"></div>
 </body>
 
 <script type="text/javascript">
@@ -61,6 +63,11 @@
 
     var spec3 = "js/market_cap.vg.json";
     vegaEmbed('#market_cap', spec3).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    var spec4 = "js/test.vg.json";
+    vegaEmbed('#test', spec4).then(function (result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
 </script>
