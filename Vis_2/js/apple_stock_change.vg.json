@@ -1,0 +1,55 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Google's stock price over time.",
+  "data": {
+    "url": "../Data/Apple_Stock.csv"
+  },
+  "vconcat": [
+  {
+    "width": 600,
+    "height": 300,
+    "mark": {"type": "area", "line": true},
+    "encoding": {
+      "x": {
+        "field": "Date",
+        "type": "temporal",
+        "scale": {"domain": {"param": "brush"}},
+        "axis": {"title": ""}
+      },
+      "y": 
+        "field": "Change", 
+        "type": "quantitative", 
+        "title": "Market Cap (Billions)"
+      },
+      "color": {
+        "field": "Colour",
+        "scale": {"range": {"field": "Colour"}}
+        }
+      }
+  },
+  {
+    "width": 600,
+    "height": 100,
+    "mark": "line",
+    "params": [{
+      "name": "brush",
+      "select": {"type": "interval", "encodings": ["x"]}
+    }],
+    "encoding": {
+      "x": {
+        "field": "Date",
+        "type": "temporal"
+      },
+      "y": {
+        "title": "% Change",
+        "field": "Change",
+        "type": "quantitative",
+        "axis": {"tickCount": 3, "grid": false}
+      },
+      "color": {
+        "field": "Colour",
+        "scale": {"range": {"field": "Colour"}}
+      }
+    }
+  }]
+}
