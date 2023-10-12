@@ -1,6 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "data": {"url": "https://raw.githubusercontent.com/tinker23r/FIT3179-public/main/Vis_2/Data/Market_Cap.csv"},
+  "title": "Market Cap by year",
   "vconcat": [{
     "width": 600,
     "height": 300,
