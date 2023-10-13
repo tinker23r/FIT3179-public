@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CPAR0023 - Visualisation 2</title>
+    <title>Apple vs Samsung</title>
 
     <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
     <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
@@ -22,32 +22,47 @@
         <h1>An overview of Apple's and Samsung's global performance</h1>
     </div>
 
-    
-    <div class="globe">
-        <h2>Global Market Share</h2>
 
-        <div class="fact_left">
-            <div class="fact_text_left">
-                <h3>Apple Fact</h3>
-                Lorem ipsum dolor sit amet et amet diam et et rebum consectetuer euismod sit eos sanctus accusam laoreet lorem lorem
+    <div class="globe">
+        <h2>Who is dominating the global market?</h2>
+
+        <div class="fact" style="width: 30%">
+            <div class="fact_text" style="margin-left: 30%;">
+                <h3 style="padding-bottom: 2%;">Apple Fact</h3>
+                Apple's iOS operating system, which is exclusive to its iPhone devices, is known for its seamless
+                integration with other Apple products and services, such as the Mac, iPad, Apple Watch, and iCloud.
+                Which limits its appeal to richer nations.
+            </div>
+        </div>
+
+        <div id="globe_ios_vs_android"></div>
+
+        <div class="fact" style="width: 26%">
+            <div class="fact_text" style="margin-right: 30%;">
+                <h3 style="padding-bottom: 2%;">Samsung Fact</h3>
+                Samsung has a significant market share and a wide range of smartphone models catering to various
+                consumer preferences and price points, from premium flagship devices to mid-range and budget options.
             </div>
         </div>
         
-        <div id="globe_ios_vs_android"></div>            
-        
-        <div class="fact_right">
-            <div class="fact_text_right">
-                <h3>Samsung Fact</h3>
-                Lorem ipsum dolor sit amet erat amet accusam odio sadipscing ex dolores duis aliquyam amet elit aliquyam feugait lorem et
-            </div>
-        </div>
     </div>
 
-    <div id="streamgraph"></div>
+    <div class="globe">
+        <h2>So is Samsung generating more revenue?</h2>
+        <div id="streamgraph"></div>
 
-    <div id="market_cap"></div>
+    </div>
 
-    <div id="test"></div>
+    <div class="globe">
+        <h2>Market domination is not everything</h2>
+        <div id="market_cap"></div>
+
+    </div>
+
+
+
+    <!-- <div id="barchart"></div> -->
+
 </body>
 
 <script type="text/javascript">
@@ -58,17 +73,17 @@
 
     var spec2 = "js/streamgraph.vg.json";
     vegaEmbed('#streamgraph', spec2).then(function (result) {
-      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
 
     var spec3 = "js/market_cap.vg.json";
     vegaEmbed('#market_cap', spec3).then(function (result) {
-      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
 
-    var spec4 = "js/test.vg.json";
-    vegaEmbed('#test', spec4).then(function (result) {
-      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    var spec4 = "js/barchart.vg.json";
+    vegaEmbed('#barchart', spec4).then(function (result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
 </script>
 

@@ -2,25 +2,26 @@
   "$schema": "https://vega.github.io/schema/vega/v5.json",
   "width": 600,
   "height": 600,
-
   "signals": [
     { "name": "tx", "update": "width / 2" },
     { "name": "ty", "update": "height / 2" },
     {
       "name": "scale",
-      "value": 250,
+      "value": 300,
       "on": [{
         "events": {"type": "wheel", "consume": true},
-        "update": "clamp(scale * pow(1.001, -event.deltaY * pow(16, event.deltaMode)), 150, 3000)"
+        "update": "clamp(scale * pow(1.0005, -event.deltaY * pow(16, event.deltaMode)), 150, 3000)"
       }]
     },
     {
       "name": "angles",
       "value": [0, 0],
-      "on": [{
+      "on": [
+        {
         "events": "pointerdown",
         "update": "[rotateX, rotateY]"
-      }]
+        }
+      ]
     },
     {
       "name": "cloned",
@@ -56,7 +57,7 @@
       "name": "rotateX", "value": 0,
       "on": [{
         "events": {"signal": "delta"},
-        "update": "angles[0] + delta[0]"
+        "update": "clamp(angles[0] + delta[0], -180, 180)"
       }]
     },
     {
@@ -123,14 +124,14 @@
     }
   ],
   "marks": [
+    
     {
       "type": "shape",
-      "from": {"data": "graticule"},
+      "from": {"data": "oceans"},
       "encode": {
         "enter": {
-          "strokeWidth": {"value": 1},
-          "stroke": {"value": "lightgray"},
-          "fill": {"value": null}
+          "fill": {"value": "lightblue"},
+          "fillOpacity": {"value": 1}
         }
       },
       "transform": [
@@ -139,10 +140,13 @@
     },
     {
       "type": "shape",
-      "from": {"data": "oceans"},
+      "from": {"data": "graticule"},
       "encode": {
         "enter": {
-          "fill": {"value": "lightblue"}
+          "strokeWidth": {"value": 1},
+          "stroke": {"value": "lightgray"},
+          "strokeOpacity": {"value": 1},
+          "fill": {"value": null}
         }
       },
       "transform": [
@@ -170,6 +174,7 @@
         "enter": {
           "opacity": {"scale": "opacity", "field": "market_leader_value"},
           "fill": {"scale": "color", "field": "Market_Dominator"},
+          "stroke": {"value": "white"},
           "tooltip": {
             "signal": "{\"Country\": isValid(datum[\"Country\"]) ? datum[\"Country\"] : \"\"+datum[\"Country\"], \"IOS Market Share\": format(datum[\"iosMarketShare\"], \"\"), \"Android Market Share\": format(datum[\"androidMarketShare\"], \"\"), \"Total Smartphones\": isValid(datum[\"numUsers\"]) ? datum[\"numUsers\"] : \"\"+datum[\"numUsers\"]}"
           }
@@ -186,8 +191,8 @@
     {
       "name": "color",
       "type": "ordinal",
-      "domain": ["IOS", "Android"],
-      "range": ["#E0BFB8 ", "#498d00"]
+      "domain": ["Android", "IOS" ],
+      "range": [ "#00CB33", "#CB0098"]
     },
     {
       "name": "opacity",
@@ -211,7 +216,14 @@
       "title": "Market Dominator",
       "titleColor": "white",
       "labelColor": "white",
-      "encode": {"symbols": {"update": {"opacity": {"value": 0.6}}}}
+      "encode": {
+        "symbols": {
+          "update": {
+            "opacity": {"value": 0.6},
+            "stroke": {"value": "white"}
+          }
+        }
+      }
     },
     {
       "title": "Market Share %",
@@ -224,7 +236,7 @@
           "update": {
             "fill": {"value": "black"},
             "fillOpacity": {"value": 0.6},
-            "stroke": {"value": "transparent"}
+            "stroke": {"value": "white"}
           }
         }
       }

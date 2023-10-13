@@ -6,10 +6,10 @@
 
 .header {
 	width: 100%;
-	background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(../images/1f0cugpj.bmp);
+	background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(../images/banner.jpeg);
 	background-size: cover;
 	background-repeat: no-repeat, no-repeat;
-	background-position: center;
+	background-position: top center;
 }
 
 .header h1 {
@@ -19,45 +19,19 @@
 	padding-bottom: 10%;
 }
 
-#globe_ios_vs_android {
-	float: left;
-	width: 40%;
-	margin-left: 4%;
-}
-
-.fact_left {
-	color: #ffffff;
+.fact {
+	color: #ffffff8f;
 	text-align: justify;
 	float: left;
-	width: 30%;
-}
-.fact_right {
-	color: #ffffff;
-	text-align: justify;
-	float: left;
-	width: 26%;
 }
 
-.fact_text_left{
-	margin-left: 30%;
-	margin-top: 50%;
+.fact_text {
+	margin-top: 40%;
 }
-.fact_text_right{
-	margin-right: 30%;
-	margin-top: 50%;
-}
-
 
 .globe {
 	width: 100%;
-	background-image: linear-gradient(rgba(0, 0, 0, 0.80), rgba(0, 0, 0, 0.80));
-}
-
-.globe h2 {
-	color: #ffffff;
-	text-align: center;
-	padding-top: 1%;
-	padding-bottom: 1%;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 .globe:after {
@@ -66,3 +40,26 @@
 	display: table;
 	clear: both;
 }
+
+.globe h2 {
+	color: #ffffff;
+	text-align: center;
+	padding-top: 3%;
+	padding-bottom: 1%;
+}
+
+#globe_ios_vs_android {
+	float: left;
+	width: 40%;
+	margin-left: 4%;
+}
+
+#streamgraph {
+	float: left;
+	margin-left: 27%;
+}
+
+#market_cap {}
+
+#barchart {}
+

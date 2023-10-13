@@ -6,7 +6,7 @@
   "params": [
     {
       "name": "selected_continent",
-      "value": "Oceania",
+      "value": "Africa",
       "bind": {
       "input": "select",
       "options": ["Africa", "Asia", "Europe", "North America", "Oceania", "South America"],
@@ -18,7 +18,10 @@
     "url": "../Homework_10/Data/Market_Share.csv"
   },
   "transform": [
-    {"filter": "datum.Continent == selected_continent"}
+    {"filter": "datum.Continent == selected_continent"},
+    {"filter": "datum.numUsers > 0" },
+    {"filter": "datum.OperatingSystem != 'Other'" }
+
   ],
   "encoding": {"y": {"field": "Country"}},
   "layer": [
@@ -50,8 +53,8 @@
           "field": "OperatingSystem",
           "type": "nominal",
           "scale": {
-            "domain": ["Android", "IOS","Other"],
-            "range": ["#498d00", "#E0BFB8 ","#808080"]
+            "domain": ["Android", "IOS" ],
+            "range": [ "#00CB33", "#CB0098"]
           }
         }
       }

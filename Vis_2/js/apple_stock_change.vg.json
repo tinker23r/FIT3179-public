@@ -4,33 +4,28 @@
   "data": {
     "url": "../Data/Apple_Stock.csv"
   },
-  "vconcat": [
-  {
+  "vconcat": [{
     "width": 600,
     "height": 300,
-    "mark": {"type": "area", "line": true},
+    "mark": "line",
     "encoding": {
       "x": {
         "field": "Date",
         "type": "temporal",
+        "timeUnit": "yearmonthdate",
         "scale": {"domain": {"param": "brush"}},
         "axis": {"title": ""}
       },
-      "y": 
-        "field": "Change", 
+      "y": {
+        "field": "Open", 
         "type": "quantitative", 
         "title": "Market Cap (Billions)"
-      },
-      "color": {
-        "field": "Colour",
-        "scale": {"range": {"field": "Colour"}}
-        }
       }
-  },
-  {
+    }
+  }, {
     "width": 600,
     "height": 100,
-    "mark": "line",
+    "mark": "area",
     "params": [{
       "name": "brush",
       "select": {"type": "interval", "encodings": ["x"]}
@@ -38,17 +33,14 @@
     "encoding": {
       "x": {
         "field": "Date",
-        "type": "temporal"
+        "type": "temporal",
+        "timeUnit": "yearmonthdate"
       },
       "y": {
         "title": "% Change",
         "field": "Change",
         "type": "quantitative",
         "axis": {"tickCount": 3, "grid": false}
-      },
-      "color": {
-        "field": "Colour",
-        "scale": {"range": {"field": "Colour"}}
       }
     }
   }]

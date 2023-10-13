@@ -1,8 +1,21 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 400, "height": 600,
+  "width": 800, "height": 600,
   "data": {"url": "../Vis_2/Data/Annual_Revenue.csv"},
   "title": "Revenue generated annually",
+  "config": {
+    "background": null,
+    "axis": {
+      "labelColor": "white",
+      "titleColor": "white",
+      "gridOpacity": 0.2
+    },
+    "legend": {
+      "labelColor": "white",
+      "titleColor": "white"
+    },
+    "title": {"labelColor": "white"}
+  },
   "mark": "area",
   "encoding": {
     "y": {
@@ -20,7 +33,7 @@
       "type": "nominal",
       "scale": {
         "domain": ["Samsung", "Apple"],
-        "range": ["#498d00", "#E0BFB8"]
+        "range": [ "#00CB33", "#CB0098"]
       }
     }
   }

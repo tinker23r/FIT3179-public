@@ -23,7 +23,7 @@
         "type": "nominal",
         "scale": {
           "domain": ["Samsung", "Apple"],
-          "range": ["#498d00", "#E0BFB8"]
+          "range": [ "#00CB33", "#CB0098"]
         }
       }
     }
@@ -51,7 +51,7 @@
         "type": "nominal",
         "scale": {
           "domain": ["Samsung", "Apple"],
-          "range": ["#498d00", "#E0BFB8"]
+          "range": [ "#00CB33", "#CB0098"]
         }
       }
     }
