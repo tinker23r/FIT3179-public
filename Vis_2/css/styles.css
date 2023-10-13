@@ -26,7 +26,7 @@
 }
 
 .fact_text {
-	margin-top: 40%;
+	margin-top: 60%;
 }
 
 .globe {
@@ -50,16 +50,29 @@
 
 #globe_ios_vs_android {
 	float: left;
-	width: 40%;
+	width: 46%;
 	margin-left: 4%;
 }
 
 #streamgraph {
 	float: left;
-	margin-left: 27%;
+	width: 46%;
+	margin-left: 2%;
+	margin-right: 2%;
 }
 
-#market_cap {}
+#market_cap {
+	float: left;
+	width: 46%;
+	margin-left: 4%;
+}
 
-#barchart {}
+#barchart {
+	float: left;
+	width: 46%;
+	margin-left: 4%;
+}
 
+.vega-bind-name {
+	color: #ffffff;
+}

@@ -1,10 +1,21 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "data": {"url": "https://raw.githubusercontent.com/tinker23r/FIT3179-public/main/Vis_2/Data/Market_Cap.csv"},
-  "title": "Market Cap by year",
+  "config": {
+    "background": null,
+    "axis": {
+      "labelColor": "white",
+      "titleColor": "white",
+      "gridOpacity": 0.2
+    },
+    "legend": {
+      "labelColor": "white",
+      "titleColor": "white"
+    }
+  },
   "vconcat": [{
-    "width": 600,
-    "height": 300,
+    "width": 800,
+    "height": 400,
     "mark": "line",
     "encoding": {
       "x": {
@@ -28,8 +39,8 @@
       }
     }
   }, {
-    "width": 600,
-    "height": 100,
+    "width": 800,
+    "height": 200,
     "mark": "area",
     "params": [{
       "name": "brush",
@@ -41,7 +52,7 @@
         "type": "temporal"
       },
       "y": {
-        "title": "% Change",
+        "title": "Market Cap delta (%)",
         "field": "Change",
         "type": "quantitative",
         "axis": {"tickCount": 3, "grid": false}

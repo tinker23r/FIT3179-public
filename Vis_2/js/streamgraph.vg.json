@@ -14,7 +14,7 @@
       "labelColor": "white",
       "titleColor": "white"
     },
-    "title": {"labelColor": "white"}
+    "title": {"color": "white", "align": "center"}
   },
   "mark": "area",
   "encoding": {

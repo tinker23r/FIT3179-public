@@ -1,13 +1,13 @@
 {
   "$schema": "https://vega.github.io/schema/vega/v5.json",
-  "width": 600,
-  "height": 600,
+  "width": 800,
+  "height": 800,
   "signals": [
     { "name": "tx", "update": "width / 2" },
     { "name": "ty", "update": "height / 2" },
     {
       "name": "scale",
-      "value": 300,
+      "value": 400,
       "on": [{
         "events": {"type": "wheel", "consume": true},
         "update": "clamp(scale * pow(1.0005, -event.deltaY * pow(16, event.deltaMode)), 150, 3000)"
@@ -54,14 +54,14 @@
       }]
     },
     {
-      "name": "rotateX", "value": 0,
+      "name": "rotateX", "value": -10,
       "on": [{
         "events": {"signal": "delta"},
         "update": "clamp(angles[0] + delta[0], -180, 180)"
       }]
     },
     {
-      "name": "rotateY", "value": 0,
+      "name": "rotateY", "value": 20,
       "on": [{
         "events": {"signal": "delta"},
         "update": "clamp(angles[1] + delta[1], -60, 60)"
@@ -124,14 +124,13 @@
     }
   ],
   "marks": [
-    
     {
       "type": "shape",
       "from": {"data": "oceans"},
       "encode": {
         "enter": {
-          "fill": {"value": "lightblue"},
-          "fillOpacity": {"value": 1}
+          "fill": {"value": "#09326C"},
+          "fillOpacity": {"value": 0.65}
         }
       },
       "transform": [
@@ -145,7 +144,6 @@
         "enter": {
           "strokeWidth": {"value": 1},
           "stroke": {"value": "lightgray"},
-          "strokeOpacity": {"value": 1},
           "fill": {"value": null}
         }
       },
@@ -160,7 +158,8 @@
         "enter": {
           "strokeWidth": {"value": 0.3},
           "stroke": {"value": "black"},
-          "fill": {"value": "#e5e8d3"}
+          "fill": {"value": "darkgrey"},
+          "fillOpacity":{"value": 0.5}
         }
       },
       "transform": [

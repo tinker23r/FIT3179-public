@@ -3,6 +3,20 @@
   "title": "IOS vs Android Market Share by Continent",
   "width": 600,
   "height": 400,
+  "background": null,
+  "config": {
+    "axis": {
+      "labelColor": "white",
+      "titleColor": "white",
+      "gridColor": "white",
+      "tickColor": "white"
+    },
+    "legend": {
+      "titleColor": "white",
+      "labelColor": "white"
+    },
+    "title": {"color": "white"}
+  },
   "params": [
     {
       "name": "selected_continent",
